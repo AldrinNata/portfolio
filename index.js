@@ -25,6 +25,13 @@ function topFunction() {
     });
 }
 
+function goHome() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 function goExperience() {
     window.scrollTo({
         top: experience.offsetTop,
