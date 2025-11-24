@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Aldrin B. Natanauan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css' rel='stylesheet'>
@@ -10,6 +11,7 @@
     <div class="container">
       <div class="navBar">
         <div class="lists">
+          <a id="home-btn" onclick="goHome()">Home</a>
           <a id="about-btn" onclick="goAbout()">About</a>
           <a id="projects-btn" onclick="goProjects()">Projects</a>
           <a id="experience-btn" onclick="goExperience()">Experience</a>
@@ -18,11 +20,13 @@
       </div>
       <div class="profile">
         <!-- <img src="images/aldrin.jpg" alt="Aldrin Natanauan"> -->
-        <h1>Aldrin Barba Natanauan</h1>
-        <p>Bachelor of Science in Information Technology | Major in Network and Web Application
-          <br>Bataan Peninsula State University
-        </p>
-        <button>Get in touch</button>
+        <div>
+          <h1>Aldrin Barba Natanauan</h1>
+          <p>Bachelor of Science in Information Technology | Major in Network and Web Application
+            <br>Bataan Peninsula State University
+          </p>
+          <button onclick="goContact()">Get in touch</button>
+        </div>
       </div>
 
       <div id="projects" class="projects">
@@ -32,24 +36,21 @@
             <div class="project-item">
               <img src="images/dswd.png">
               <div class="projectText">
-                <h2>Document Checklists Data Management System</h2>
-                <p>Developed a Document Checklists Data Management System for the Department of Social Welfare and Development. 
+                <h2>SWAD Bataan Document Checklists</h2>
+                <p>A Document Checklists Data Management System for the Department of Social Welfare and Development (DSWD). 
                   I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
                   and I also worked on the front-end side of things.</p>
               </div>
             </div>
             <div class="project-item">
               <div class="projectText">
-                <h2>Document Checklists Data Management System</h2>
-                <p>Developed a Document Checklists Data Management System for the Department of Social Welfare and Development. 
-                  I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
-                  and I also worked on the front-end side of things.</p>
+                <h2>Herbhie: E-commerce on Herbal Plants</h2>
+                <p>An e-commerce platform specialising in herbal plants, featuring email notifications to conveniently verify plant availability and facilitate purchases for plant enthusiasts. It also supports business owners in marketing their plants while offering information on cultivation techniques and proper usage of herbal plants. This is our college capstone project where I worked as the Lead Developer.</p>
               </div>
               <div class="projectImages">
                 <img src="images/herbhie.png">
                 <img src="images/herbalpedia.png">
               </div>
-              
             </div>
           </div>
         </div>
@@ -60,12 +61,25 @@
           <h1 class="section-title">Experience</h1>
           <div class="experience-list">
             <div class="experience-item">
+              <div class="expImages">
+                <img src="images/capstone.png">
+              </div>
+              <div class="expText">
+                <h2>Full Stack Developer | Capstone Project</h2>
+                <h3>Bataan Peninsula State University</h3>
+                <h3 class="exp-date">June 2024 - January 2025</h3>
+                <p>Developed a working e-commerce web application that involves the users (sellers and customers) 
+                  to buy and sell herbs while also helping to spread information about the uses, benefits, and 
+                  reminders about different herbs. This was our capstone project, and I worked as the Lead Developer. 
+                  I did the front-end and back-end development of the system using mainly HTML, PHP, MySQL, JavaScript, and AJAX.</p>
+              </div>
+            </div>
+            <div class="experience-item">
               <div class="expText">
                 <h2>Back-end Developer | On the Job Training</h2>
                 <h3>Department of Social Welfare and Development</h3>
-                <p>Developed a Document Checklists Data Management System for the Department of Social Welfare and Development. 
-                  I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
-                  and I also worked on the front-end side of things.</p>
+                <h3 class="exp-date">February 2025 - May 2025</h3>
+                <p>Trained for 513 hours and 12 minutes in the Department of Social Welfare and Development (DSWD) as a back-end developer and IT support. I developed a data management system for the Department of Social Welfare and Development (DSWD) using JavaScript, PHP, and MySQL.</p>
               </div>
               <div class="expImages">
                 <img src="images/ojt1.jpg">
@@ -74,33 +88,14 @@
             </div>
             <div class="experience-item">
               <div class="expImages">
-                <img src="images/capstone.png">
+                <img src="images/csstesda1.jpg">
+                <img src="images/csstesda2.jpg">
               </div>
               <div class="expText">
-                <h2>Full Stack Developer | Capstone Project</h2>
-                <h3>Bataan Peninsula State University</h3>
-                <p>Developed a working e-commerce web application that involves the users (sellers and customers) 
-                  to buy and sell herbs while also helping to spread information about the uses, benefits, and 
-                  reminders about different herbs. This was our capstone project, and I worked as the Lead Developer. 
-                  I did the front-end and back-end development of the system using mainly HTML, PHP, MySQL, JavaScript, and AJAX.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="contact" class="contact">
-        <div class="contactContainer">
-          <h1 class="section-title">Contact</h1>
-          <div class="contact-list">
-            <div class="contact-item">
-              <div class="contactText">
-                <h2>Address</h2>
-                <p>Antipolo, Philippines</p>
-              </div>
-              <div class="contactImages">
-                <img src="images/phone.png">
-                <img src="images/email.png">
+                <h2>Computer Systems Servicing NCII</h2>
+                <h3>ADA Technical Foundation Inc.- Hermosa, Bataan</h3>
+                <h3 class="exp-date">September 2025 - November 2025</h3>
+                <p>Trained for 2 months in ADA Technical Foundation Inc., a TESDA accredited training center for Computer Systems Servicing NCII. Here, I learned how to troubleshoot computer hardware and software issues. I also learned how to configure and maintain computer networks. Lastly, I learned how to install windows servers, configure DNS, configure DHCP, configure Active Directory, and connect multiple devices to a domain.</p>
               </div>
             </div>
           </div>
@@ -112,20 +107,72 @@
           <h1 class="section-title">About</h1>
           <div class="about-list">
             <div class="about-item">
-              <div class="aboutText">
-                <h2>Personal Information</h2>
-                <p>Full Name: Aldrin Barba Natanauan</p>
-                <p>Age: 21</p>
-                <p>Address: Antipolo, Philippines</p>
-              </div>
               <div class="aboutImages">
-                <img src="images/phone.png">
-                <img src="images/email.png">
+                <img src="images/aldrin.jpg" alt="Profile Image">
+              </div>
+              <div class="aboutText">
+                <h2>Hello, I'm <span class="highlight">Aldrin Barba Natanauan</span></h2>
+                <p>
+                  I am a dedicated developer passionate about building clean, 
+                  efficient, and meaningful digital experiences. I focus on creating 
+                  well-structured systems, modern interfaces, and solutions that 
+                  provide real value to users.
+                </p>
+                <p>
+                  My work blends functionality and design—balancing user-friendly 
+                  interfaces with solid back-end logic. I enjoy solving difficult 
+                  problems, learning new technologies, and continuously improving 
+                  my craft.
+                </p>
+                <p>
+                  When I'm not coding, I spend time exploring new skills and hobbies that might help me grow as an individual.
+                </p>
+                <a href="documents/resume.pdf" download class="resumeBtn">Download Resume</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div id="contact" class="contact">
+        <div class="contactContainer">
+          <h1 class="section-title">Contact</h1>
+          <p class="contact-description">
+            Feel free to reach out to me for collaborations, opportunities, or any inquiries.
+          </p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <i class="bx bx-envelope contact-icon"></i>
+              <div>
+                <h3>Email</h3>
+                <p>aldrinnatanauan24@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bx bx-phone contact-icon"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+63 950 266 2677</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bx bxl-linkedin contact-icon"></i>
+              <div>
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/aldrin-natanauan/" target="_blank">linkedin.com/in/aldrin-natanauan</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bxr  bx-globe-alt-2 contact-icon"></i>
+              <div>
+                <h3>Onlinejobs.ph</h3>
+                <p><a href="https://www.onlinejobs.ph/jobseekers/info/4613060" target="_blank">onlinejobs.ph/jobseekers/info/4613060</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <script src="index.js"></script>
   </body>

@@ -42,14 +42,14 @@ body{
 .navBar{
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     z-index: 1;
     padding-top: 30px;
 }
 .navBar .lists{
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     z-index: 1;
     margin-left: 15vw;
     margin-right: 15vw;
@@ -255,10 +255,19 @@ body{
     margin-top: var(--margin-xs);
     color: var(--gray90);
 }
+.experience-list .exp-date{
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0px;
+    margin-top: var(--margin-xs);
+    color: var(--gray70);
+    font-style: italic;
+    text-align: end;
+}
 .experience-list p{
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-top: 30px;
+    margin-top: var(--margin-xl);
     color: var(--gray70);
     text-align: justify;
 }
@@ -268,10 +277,194 @@ body{
     padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .contactContainer{
     margin-left: 15vw;
     margin-right: 15vw;
     padding-bottom: 5vh;
+    max-width: 900px;
+    /* border-bottom: var(--gray30) 2px solid; */
+}
+
+.contact-description {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.contact-item {
+  background: white;
+  border-left: 20px solid var(--colorb);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.contact-icon {
+  font-size: 30px;
+  color: var(--colora);
+}
+
+.contact-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #003d0a;
+}
+
+.contact-item p {
+  margin: 3px 0 0;
+  font-size: 15px;
+  color: var(--gray30);
+}
+
+.contact-item a {
+  color: #087f23;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.about {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutContainer {
+    margin-left: 15vw;
+    margin-right: 15vw;
     border-bottom: var(--gray30) 2px solid;
+    padding-bottom: 5vh;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    gap: var(--margin-xxl);
+    flex-wrap: wrap;
+}
+
+.aboutText {
+    flex: 1 1 500px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--gray70);
+}
+
+.aboutText h2 {
+    color: var(--gray90);
+    margin-bottom: var(--margin-m);
+    font-size: 2rem;
+}
+
+.aboutText .highlight {
+    color: var(--colorb);
+}
+
+.aboutText p {
+    margin-bottom: var(--margin-m);
+    text-align: justify;
+}
+
+.aboutImages {
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutImages img {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--gray30);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutImages img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(206, 212, 106, 0.25);
+}
+
+.resumeBtn {
+    display: inline-block;
+    margin-top: var(--margin-m);
+    padding: var(--padding-s) var(--padding-l);
+    background-color: var(--colorb);
+    color: var(--gray10);
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.resumeBtn:hover {
+    background-color: var(--colora);
+    color: var(--gray90);
+    transform: translateY(-2px);
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+    .about-item {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .aboutImages img {
+        width: 60%;
+    }
+
+    .navBar {
+        position: fixed;
+        bottom: 0px;            
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;             
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.35rem 0.75rem; 
+        background: rgba(0,0,0,0.55); 
+        border-radius: 999px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+        z-index: 9999;
+        margin: 0;               
+        -webkit-backdrop-filter: blur(6px); 
+        backdrop-filter: blur(6px);
+    }
+    .navBar .lists {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0;
+        gap: var(--margin-m);
+    }
+    .navBar a {
+        font-size: 0.70rem;
+        padding: 5px 7px; 
+        margin: 0;          
+        color: var(--gray90);
+    }
 }
