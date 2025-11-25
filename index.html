@@ -12,19 +12,20 @@
       <div class="navBar">
         <div class="lists">
           <a id="home-btn" onclick="goHome()">Home</a>
-          <a id="about-btn" onclick="goAbout()">About</a>
           <a id="projects-btn" onclick="goProjects()">Projects</a>
           <a id="experience-btn" onclick="goExperience()">Experience</a>
+          <a id="about-btn" onclick="goAbout()">About</a>
           <a id="contact-btn" onclick="goContact()">Contact</a>
         </div>
       </div>
       <div id="profile" class="profile">
-        <!-- <img src="images/aldrin.jpg" alt="Aldrin Natanauan"> -->
-        <div>
+        <div class="profileImages">
+          <img src="images/aldrin2.webp" alt="Profile Image">
+        </div>
+        <div class="profileText">
           <h1>Aldrin Barba Natanauan</h1>
-          <p>Bachelor of Science in Information Technology | Major in Network and Web Application
-            <br>Bataan Peninsula State University
-          </p>
+          <p>Bachelor of Science in Information Technology | Major in Network and Web Application</p>
+          <p class="univ">Bataan Peninsula State University</p>
           <button onclick="goContact()">Get in touch</button>
         </div>
       </div>
@@ -34,12 +35,14 @@
           <h1 class="section-title">Projects</h1>
           <div class="project-list">
             <div class="project-item">
-              <img src="images/dswd.png">
               <div class="projectText">
                 <h2>SWAD Bataan Document Checklists</h2>
                 <p>A Document Checklists Data Management System for the Department of Social Welfare and Development (DSWD). 
                   I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
                   and I also worked on the front-end side of things.</p>
+              </div>
+              <div class="projectImages">
+                <img src="images/dswd.webp">
               </div>
             </div>
             <div class="project-item">
@@ -48,8 +51,8 @@
                 <p>An e-commerce platform specialising in herbal plants, featuring email notifications to conveniently verify plant availability and facilitate purchases for plant enthusiasts. It also supports business owners in marketing their plants while offering information on cultivation techniques and proper usage of herbal plants. This is our college capstone project where I worked as the Lead Developer.</p>
               </div>
               <div class="projectImages">
-                <img src="images/herbhie.png">
-                <img src="images/herbalpedia.png">
+                <img src="images/herbhie.webp">
+                <img src="images/herbalpedia.webp">
               </div>
             </div>
           </div>
@@ -61,9 +64,6 @@
           <h1 class="section-title">Experience</h1>
           <div class="experience-list">
             <div class="experience-item">
-              <div class="expImages">
-                <img src="images/capstone.png">
-              </div>
               <div class="expText">
                 <h2>Full Stack Developer | Capstone Project</h2>
                 <h3>Bataan Peninsula State University</h3>
@@ -72,6 +72,9 @@
                   to buy and sell herbs while also helping to spread information about the uses, benefits, and 
                   reminders about different herbs. This was our capstone project, and I worked as the Lead Developer. 
                   I did the front-end and back-end development of the system using mainly HTML, PHP, MySQL, JavaScript, and AJAX.</p>
+              </div>
+              <div class="expImages">
+                <img src="images/capstone.webp">
               </div>
             </div>
             <div class="experience-item">
@@ -82,20 +85,20 @@
                 <p>Trained for 513 hours and 12 minutes in the Department of Social Welfare and Development (DSWD) as a back-end developer and IT support. I developed a data management system for the Department of Social Welfare and Development (DSWD) using JavaScript, PHP, and MySQL.</p>
               </div>
               <div class="expImages">
-                <img src="images/ojt1.jpg">
-                <img src="images/ojt2.jpg">
+                <img src="images/ojt1.webp">
+                <img src="images/ojt2.webp">
               </div>
             </div>
             <div class="experience-item">
-              <div class="expImages">
-                <img src="images/csstesda1.jpg">
-                <img src="images/csstesda2.jpg">
-              </div>
               <div class="expText">
                 <h2>Computer Systems Servicing NCII</h2>
                 <h3>ADA Technical Foundation Inc.- Hermosa, Bataan</h3>
                 <h3 class="exp-date">September 2025 - November 2025</h3>
                 <p>Trained for 2 months in ADA Technical Foundation Inc., a TESDA accredited training center for Computer Systems Servicing NCII. Here, I learned how to troubleshoot computer hardware and software issues. I also learned how to configure and maintain computer networks. Lastly, I learned how to install windows servers, configure DNS, configure DHCP, configure Active Directory, and connect multiple devices to a domain.</p>
+              </div>
+              <div class="expImages">
+                <img src="images/csstesda1.webp">
+                <img src="images/csstesda2.webp">
               </div>
             </div>
           </div>
@@ -108,7 +111,7 @@
           <div class="about-list">
             <div class="about-item">
               <div class="aboutImages">
-                <img src="images/aldrin.jpg" alt="Profile Image">
+                <img src="images/aldrin.webp" alt="Profile Image">
               </div>
               <div class="aboutText">
                 <h2>Hello, I'm <span class="highlight">Aldrin Barba Natanauan</span></h2>
