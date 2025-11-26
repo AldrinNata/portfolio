@@ -7,15 +7,15 @@
     <link href='https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
-    <button onclick="topFunction()" id="btn-top" title="Go to top"><i class='bx bxs-up-arrow'></i><br>Top</button> 
+    <!-- <button onclick="topFunction()" id="btn-top" title="Go to top"><i class='bx bxs-up-arrow'></i><br>Top</button>  -->
     <div class="container">
       <div class="navBar">
         <div class="lists">
-          <a id="home-btn" onclick="goHome()">Home</a>
-          <a id="projects-btn" onclick="goProjects()">Projects</a>
-          <a id="experience-btn" onclick="goExperience()">Experience</a>
-          <a id="about-btn" onclick="goAbout()">About</a>
-          <a id="contact-btn" onclick="goContact()">Contact</a>
+          <a id="home-btn" onclick="goTo('profile')">Home</a>
+          <a id="projects-btn" onclick="goTo('projects')">Projects</a>
+          <a id="experience-btn" onclick="goTo('experience')">Experience</a>
+          <a id="about-btn" onclick="goTo('about')">About</a>
+          <a id="contact-btn" onclick="goTo('contact')">Contact</a>
         </div>
       </div>
       <div id="profile" class="profile">
@@ -26,7 +26,7 @@
           <h1>Aldrin Barba Natanauan</h1>
           <p>Bachelor of Science in Information Technology | Major in Network and Web Application</p>
           <p class="univ">Bataan Peninsula State University</p>
-          <button onclick="goContact()">Get in touch</button>
+          <button onclick="goTo('contact')">Get in touch</button>
         </div>
       </div>
 
@@ -107,7 +107,7 @@
 
       <div id="about" class="about">
         <div class="aboutContainer">
-          <h1 class="section-title">About</h1>
+          <!-- <h1 class="section-title">About</h1> -->
           <div class="about-list">
             <div class="about-item">
               <div class="aboutImages">
