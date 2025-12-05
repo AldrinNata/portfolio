@@ -29,7 +29,7 @@
 }
 
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('images/bg.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url('images/bg.webp');
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -150,23 +150,23 @@ body{
 
 /* Profile */
 #profile{
-    opacity: 1;
     display: flex;
     flex-direction: row;
     color: white;
     z-index: 1;
-    height: 100vh;
+    height: 100%;
     align-items: center;
-    margin-top: -10vh;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-top: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
     gap: 5vw;
     background-color: transparent;
 
-    transform: translateX(0);
+    opacity: 0;
+    transform: translateX(-80px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.profile.show{
+#profile.show{
     opacity: 1;
     transform: translateX(0);
 }
@@ -191,22 +191,141 @@ body{
     pointer-events: none;
 }
 
-#profile:nth-child(even){
-    flex-direction: row-reverse;
+
+.profileContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+.profile-item{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+.profile-highlight{
+    color: var(--colorb);
+}
+.profileText{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+.profileSkillServices{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+    .profileSkills{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .profileSkillServices .profileSkills h1{
+        color: var(--gray90);
+        font-size: 30px;
+    }
+    .profileSkills .skill-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .profileSkills .skill-list .skill-item{
+        padding: 5px 15px;
+        background-color: var(--gray30);
+        border-radius: 999px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+        cursor: default;
+        transition: background-color 0.3s ease;
+    }
+    .profileSkills .skill-list .skill-item:hover{
+        background-color: var(--gray10);
+    }
+    .profileSkills .skill-list .skill-item p{
+        margin: 0px;
+        color: var(--gray90)
+    }
+    .profileServices{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .profileSkillServices .profileServices h1{
+        color: var(--gray90);
+        font-size: 30px;
+    }
+    .profileServices .service-list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .profileServices .service-list .service-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .profileServices .service-list .service-item p{
+        margin: 0px;
+        color: var(--gray90)
+    }
+    .profileServices .service-list .service-item i{
+        margin: 0px;
+        color: var(--gray50)
+    }
+
+.profileInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+    .profileInfo-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .profileInfo-item i{
+        margin-bottom: -15px;
+        font-size: 30px;
+        color: var(--colorb);
+    }
+    .profile-item .profileInfo-item p{
+        font-size: 20px;
+        color: var(--gray70);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .profile-item .profileDescription p{
+        font-size: 20px;
+        color: var(--gray90);
+        text-align: justify;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .profileBtns{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+/* #profile:nth-child(even){
+    flex-direction: row-reverse;
+} */
+ #profileImagesMobile img{
+    display: none;
+ }
 #profile .profileImages img{
-    width: auto;
-    height:70%;
+    position: relative;
+    width: 100%;
     object-fit: cover;
     border-radius: 12px;
     border: 2px solid var(--gray30);
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.profileText{
-    display: flex;
-    flex-direction: column;
-}
+
 .profile h1{
     font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -234,7 +353,8 @@ body{
     font-size: 15px;
     font-family: 'Arial', sans-serif;
     cursor: pointer;
-    margin-top: 20px
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .profile button:hover{
     background-color: var(--colora);
@@ -689,18 +809,59 @@ body{
         justify-content: center;
         color: white;
         z-index: 1;
-        height: 100vh;
+        height: 100%;
         padding-top: 0px;
         padding-bottom: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 5vh;
+        margin-bottom: 10vh;
         margin-left: 10vw;
         margin-right: 10vw;
         gap: 0px;
-        transform: none;
     }
-    #profile:nth-child(even){
+    .profile-item{
+        display: flex;
         flex-direction: column;
+        gap: 5vh;
+    }
+    .profileText{
+        gap: 10px;
+    }
+    .profileSkills{
+        gap: 10px;
+        padding-bottom: var(--padding-l);
+    }
+    .profileServices{
+        gap: 10px;
+        padding-bottom: var(--padding-l);
+    }
+    .profile-item .profileDescription p{
+        font-size: 15px;
+        color: var(--gray90);
+    }
+    .profile-item .profileInfo-item p{
+        font-size: 15px;
+        color: var(--gray70);
+    }
+    .profile-item .profileInfo-item i{
+        font-size: 20px;
+        color: var(--colorb);
+    }
+    .profileSkillServices .profileSkills h1{
+        font-size: 20px;
+    }
+    .profileSkillServices .profileServices h1{
+        font-size: 20px;
+    }
+    
+
+    /* #profile:nth-child(even){
+        flex-direction: column;
+    } */
+    #profileImagesMobile img{
+        display: block;
+    }
+    #profileImagesDesktop img{
+        display: none;
     }
     #profile .profileImages{
         display: block;
@@ -713,10 +874,12 @@ body{
         border: 2px solid var(--gray30);
         box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 0px;
     }
     .profile h1{
         font-size: 25px;
         margin-bottom: 0px;
+        margin-top: 0px;
     }
     .profile p{
         font-size: 15px;
@@ -725,7 +888,8 @@ body{
     }
     .profile button{
         padding: 8px 25px;
-        margin-top: 20px
+        margin-top: 20px;
+        font-size: 13px;
     }
     .section-title {
         margin-bottom: 3vh;
