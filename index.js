@@ -1,4 +1,19 @@
 
+let mybutton = document.getElementById("btn-top");
+
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.classList.add("show");
+    } else {
+        mybutton.classList.remove("show");
+    }
+}
+
+mybutton.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 
 let navBar = document.querySelector(".navBar");
@@ -10,6 +25,8 @@ let contactBtn = document.getElementById("contact-btn");
 
 let currentSection = "profile";
 let previousSection = "profile";
+
+
 
 function goTo(section) {
     navBar.classList.add("disabled");

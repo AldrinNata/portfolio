@@ -159,7 +159,6 @@ body{
     margin-top: 5vh;
     margin-left: 20vw;
     margin-right: 20vw;
-    gap: 5vw;
     background-color: transparent;
 
     opacity: 0;
@@ -172,7 +171,7 @@ body{
 }
 #profile.about{
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateX(80px);
     pointer-events: none;
 }
 #profile.contact{
@@ -182,7 +181,7 @@ body{
 }
 #profile.experience{
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateX(80px);
     pointer-events: none;
 }
 #profile.projects{
@@ -365,34 +364,33 @@ body{
 .projects{
     background-color: transparent;
     color: #fff;
-    padding: 20px;
     flex-direction: column;
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(-80px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .projects.show{
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 #projects.profile{
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #projects.about{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #projects.contact{
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #projects.experience{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 .projectContainer{
@@ -449,34 +447,33 @@ body{
 .experience {
     background-color: transparent;
     color: #fff;
-    padding: 20px;
     flex-direction: column;
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(-80px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .experience.show {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 #experience.profile{
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #experience.about{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #experience.contact{
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #experience.projects{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 .expContainer{
@@ -566,11 +563,10 @@ body{
 .contact{
     background-color: transparent;
     color: #fff;
-    padding: 20px;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    margin-top: -10vh;
+    height: 100%;
+    margin-top: 5vh;
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -586,17 +582,17 @@ body{
 }
 #contact.about{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #contact.experience{
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 #contact.projects{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateY(80px);
     pointer-events: none;
 }
 .contactContainer{
@@ -604,9 +600,13 @@ body{
     margin-right: 25vw;
     padding-bottom: 5vh;
 }
+.contactContainer h1{
+    margin-bottom: var(--margin-xl);
+}
 .contact-description {
     font-size: 20px;
     color: white;
+    margin-top: 0px;
     margin-bottom: 40px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -659,10 +659,10 @@ body{
     background-color: transparent;
     color: #fff;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: -10vh;
+    margin-top: 5vh;
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -678,7 +678,7 @@ body{
 }
 #about.contact{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateX(-80px);
     pointer-events: none;
 }
 #about.experience{
@@ -688,7 +688,7 @@ body{
 }
 #about.projects{
     opacity: 0;
-    transform: translateX(80px);
+    transform: translateX(-80px);
     pointer-events: none;
 }
 .aboutContainer {
@@ -978,7 +978,6 @@ body{
     .about {
         padding: 0px;
         height: auto;
-        min-height: 100vh;
         margin-top: 0;
     }
     .aboutContainer {
