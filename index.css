@@ -29,6 +29,7 @@
 }
 
 body{
+    background-color: black;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url('images/bg.webp');
     background-size: cover;
     background-attachment: fixed;
