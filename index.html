@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="btn-top" title="Go to top"><i class='bx bxs-up-arrow'></i><br>Top</button> 
@@ -49,15 +50,10 @@
               </div>
               <div class="profileDescription">
                 <p>
-                  I am a dedicated developer passionate about building clean, 
-                  efficient, and meaningful digital experiences. I focus on creating 
-                  well-structured systems, modern interfaces, and solutions that 
-                  provide real value to users.
-                  My work blends functionality and design—balancing user-friendly 
-                  interfaces with solid back-end logic. I enjoy solving difficult 
-                  problems, learning new technologies, and continuously improving 
-                  my craft.
-                  When I'm not coding, I spend time exploring new skills and hobbies that might help me grow as an individual.
+                  I am an Information Technology graduate with a strong interest in
+                  web application development. I enjoy creating clean,
+                  functional, and user-friendly interfaces while continuously learning
+                  new technologies.
                 </p>
               </div>
               <div class="profileBtns">
@@ -202,41 +198,81 @@
 
       <div id="about" class="about">
         <div class="aboutContainer">
-          <!-- <h1 class="section-title">About</h1> -->
+
+          <div class="aboutImages">
+            <img src="images/aldrin.webp" alt="Profile Image">
+          </div>
+
           <div class="about-list">
+
             <div class="about-item">
-              <div class="aboutImages">
-                <img src="images/aldrin.webp" alt="Profile Image">
-              </div>
               <div class="aboutText">
-                <h2>Hello, I'm <span class="highlight">Aldrin Barba Natanauan</span></h2>
-                <p>Bachelor of Science in Information Technology | Major in Network and Web Application</p>
-                <p class="univ">Bataan Peninsula State University</p>
+                <h1><span class="highlight">Aldrin Barba Natanauan</span></h1>
+                
+                <div class="education">
+                  <div class="edu-item">
+                    <i class='bxr  bx-education'></i>
+                    <p>Bachelor of Science in Information Technology</p>
+                  </div>
+                  <div class="edu-item">
+                    <i class='bxr  bx-book-library'></i> 
+                    <p>Major in Network and Web Application</p>
+                  </div>
+                  <div class="edu-item">
+                    <i class='bxr  bx-school'></i> 
+                    <p>Bataan Peninsula State University</p>
+                  </div>
+                </div>
+
+                <p class="summary">
+                  As a Full Stack Developer, I focus on creating 
+                  well-structured systems, modern interfaces, and solutions that 
+                  provide real value to users. I enjoy solving difficult 
+                  problems, learning new technologies, and continuously improving 
+                  my craft. When I'm not coding, I spend time exploring new skills and hobbies that might help me grow as an individual.
+                </p>
               </div>
             </div>
+
+            <!-- Hobbies -->
+            <div class="about-item">
+              <div class="aboutText">
+                <h2>Hobbies & Interests</h2>
+                <ul class="simple-list">
+                  <li>Watching technology-related videos</li>
+                  <li>Learning new programming concepts</li>
+                  <li>Playing FPS, RPG and strategy games</li>
+                  <li>Watching anime and reading manga</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
+
       <div id="contact" class="contact">
         <div class="contactContainer">
           <h1 class="section-title">Contact</h1>
-          <p class="contact-description">
-            Feel free to reach out to me for collaborations, opportunities, or any inquiries.
-          </p>
+          <div class="contactDescription">
+            <p class="contact-description">
+              Feel free to reach out to me for collaborations, opportunities, or any inquiries.
+            </p>
+          </div>
           <div class="contact-list">
             <div class="contact-item">
               <i class="bx bx-envelope contact-icon"></i>
               <div>
                 <h3>Email</h3>
-                <p>aldrinnatanauan24@gmail.com</p>
+                <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=aldrinnatanauan24@gmail.com" target="_blank">aldrinnatanauan24@gmail.com</a></p>
               </div>
             </div>
             <div class="contact-item">
-              <i class="bx bx-phone contact-icon"></i>
+              <i data-lucide="github" class="contact-icon"></i>  
               <div>
-                <h3>Phone</h3>
-                <p>+63 950 266 2677</p>
+                <h3>GitHub</h3>
+                <p><a href="https://www.github.com/AldrinNatanauan/" target="_blank">https://github.com/AldrinNatanauan</a></p>
               </div>
             </div>
             <div class="contact-item">
@@ -258,6 +294,11 @@
       </div>
 
     </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
     <script src="index.js"></script>
   </body>
 </html>
