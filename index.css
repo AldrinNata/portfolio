@@ -313,6 +313,9 @@ body{
 /* #profile:nth-child(even){
     flex-direction: row-reverse;
 } */
+ #profileImagesMobile{
+    display: none;
+ }
  #profileImagesMobile img{
     display: none;
  }
@@ -324,6 +327,10 @@ body{
     border: 2px solid var(--gray30);
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#profile .profileImages img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
 }
 
 .profile h1{
@@ -337,11 +344,6 @@ body{
     margin-top: var(--margin-m);
     margin-bottom: 0px;
     color: var(--gray90);
-}
-.profile .univ{
-    margin-top: var(--margin-xxs);
-    color: var(--gray70);
-    font-style: italic;
 }
 .profile button{
     width: fit-content;
@@ -437,12 +439,23 @@ body{
     gap: 10px;
     width: 50%;
 }
-.project-item img{
-    width: 50%;
-}
-.projectImages img{
+.projectImages img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.projectImages img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+.projectImages:hover img:not(:hover) {
+    transform: scale(0.97);
+}
+
 
 /* Experience */
 .experience {
@@ -519,17 +532,26 @@ body{
     flex-direction: column;
     width: 50%
 }
-.experience-list img{
-    width: 50%;
-}
 .experience-list .expImages{
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 50%;
 }
-.experience-list .expImages img{
+.expImages img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.expImages img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+.expImages:hover img:not(:hover) {
+    transform: scale(0.97);
 }
 .experience-list h2{
     font-size: 25px;
@@ -597,12 +619,17 @@ body{
     pointer-events: none;
 }
 .contactContainer{
+    display: flex;
+    flex-direction: column;
     margin-left: 25vw;
     margin-right: 25vw;
     padding-bottom: 5vh;
 }
 .contactContainer h1{
     margin-bottom: var(--margin-xl);
+}
+.contactDescription{
+    flex: 1;
 }
 .contact-description {
     font-size: 20px;
@@ -615,6 +642,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    flex: 1;
 }
 .contact-item {
     background: white;
@@ -634,6 +662,7 @@ body{
 .contact-icon {
     font-size: 30px;
     color: var(--colora);
+    width: 30px;
 }
 .contact-item h3 {
     margin: 0;
@@ -693,21 +722,37 @@ body{
     pointer-events: none;
 }
 .aboutContainer {
-    margin-left: 15vw;
-    margin-right: 15vw;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    gap: 5vw;
     /* border-bottom: var(--gray30) 2px solid;
     padding-bottom: 5vh; */
 }
-.about-list {
+.about-main{
     display: flex;
     flex-direction: column;
     gap: var(--margin-xxl);
+    flex: 1;
+}
+
+
+
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-xxs);
+    flex: 1;
+    width: 100%;
 }
 .about-item {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: var(--margin-xxl);
+    width: 100%;
 }
 .aboutText {
     display: flex;
@@ -715,22 +760,31 @@ body{
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--gray70);
-    width: 60%;
+}
+.aboutText h1 {
+    font-size: 2.8rem;
+    color: var(--gray90);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: var(--margin-xxs);
+    margin-top: 0px;
 }
 .aboutText h2 {
-    color: var(--gray90);
-    margin-bottom: var(--margin-m);
     font-size: 2rem;
+    color: var(--gray90);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 .aboutText .highlight {
     color: var(--colorb);
 }
 .aboutText p {
-    margin-bottom: var(--margin-m);
+    margin: 0px;
     text-align: justify;
+    margin-bottom: var(--margin-m);
 }
 .aboutImages {
-    width: 40%;
+    flex: 1;
 }
 .aboutImages img {
     width: 100%;
@@ -743,6 +797,43 @@ body{
     transform: scale(1.03);
     box-shadow: 0 0 35px rgba(206, 212, 106, 0.25);
 }
+.education{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: var(--margin-xl);
+    margin-top: var(--margin-l);
+}
+    .edu-item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .edu-item i{
+        margin-bottom: 0px;
+        font-size: 30px;
+        color: var(--colorb);
+    }
+    .about-item .edu-item p{
+        margin: 0px;
+        font-size: 20px;
+        color: var(--gray70);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+.aboutText .summary{
+    font-size: 20px;
+    color: var(--gray90);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.aboutText .simple-list{
+    margin: 0;
+    font-size: 20px;
+    color: var(--gray70);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
 .resumeBtn {
     margin-top: var(--margin-m);
     padding: var(--padding-s) var(--padding-l);
@@ -982,10 +1073,14 @@ body{
         margin-top: 0;
     }
     .aboutContainer {
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: 8vw;
+        margin-right: 8vw;
         margin-top: 5vh;
         margin-bottom: 8vh;
+        flex-direction: column;
+    }
+    .about-list{
+        gap: var(--margin-m);
     }
     .about-item {
         gap: var(--margin-xxs);
@@ -1009,6 +1104,29 @@ body{
         width: 100%;
         height: auto;
     }
+    .aboutText h1 {
+        font-size: 25px;
+    }
+    .education{
+        margin-top: var(--margin-m);
+    }
+    .education h2{
+        font-size: 20px;
+    }
+    .aboutText .summary{
+        font-size: 15px;
+    }
+    .about-item .edu-item p{
+        font-size: 15px;
+        text-align: left;
+    }
+    .about-item .edu-item i{
+        font-size: 20px;
+    }
+    .aboutText .simple-list li{
+        font-size: 15px;
+    }
+
     .resumeBtn {
         margin-top: var(--margin-xs);
         padding: var(--padding-xxs) var(--padding-m);
