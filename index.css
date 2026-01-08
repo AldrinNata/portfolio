@@ -938,12 +938,23 @@ body{
 
 /* Mobile Responsive */
 @media (max-width: 800px) {
-    body{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('images/bgphone.webp');
-        background-size: cover;
-        background-attachment: fixed;
+    body {
         margin: 0;
-        -webkit-tap-highlight-color: transparent;
+        background: black;
+    }
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+
+        background-image:
+            linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)),
+            url("images/bgphone.webp");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .navBar {
         position: fixed;
