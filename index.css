@@ -309,6 +309,17 @@ body{
         flex-direction: row;
         gap: 10px;
     }
+    .profileBtns button{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    .profileBtns button i{
+        padding-top: 2px;
+        padding-bottom: 1px;
+    }
 
 /* #profile:nth-child(even){
     flex-direction: row-reverse;
@@ -639,8 +650,8 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .contact-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 25px;
     flex: 1;
 }
@@ -653,7 +664,11 @@ body{
     display: flex;
     align-items: center;
     gap: 15px;
+    text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .contact-item:hover {
     transform: translateY(-5px);
@@ -673,14 +688,11 @@ body{
 .contact-item p {
     margin: 3px 0 0;
     font-size: 15px;
-    color: var(--gray30);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.contact-item a {
     color: #087f23;
     text-decoration: none;
 }
-.contact-item a:hover {
+.contact-item:hover p{
     text-decoration: underline;
 }
 
