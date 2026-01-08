@@ -1,20 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>Aldrin B. Natanauan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00490c">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Creator: Aldrin B. Natanauan, Web Developer, Front-End Developer, Back-End Developer">
+
     <link rel="stylesheet" href="index.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/3.0.4/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/88acbcd9e9.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <button onclick="topFunction()" id="btn-top" title="Go to top"><i class='bx bxs-up-arrow'></i><br>Top</button> 
     <div class="container">
-      <div class="navBar">
+      <nav role="navigation" class="navBar">
         <div class="lists">
           <a id="home-btn" onclick="goTo('profile')">Home</a>
           <a id="projects-btn" onclick="goTo('projects')">Projects</a>
@@ -22,318 +23,321 @@
           <a id="about-btn" onclick="goTo('about')">About</a>
           <a id="contact-btn" onclick="goTo('contact')">Contact</a>
         </div>
-      </div>
-      <div id="profile" class="profile">
-        <div class="profileContainer">
-          <div class="profile-item">
-            <div id="profileImagesMobile" class="profileImages">
-                <img src="images/aldrin2.webp" alt="Profile Image">
-            </div>
-            <div class="profileText">
-              <h1>Hi, I'm <span class="profile-highlight">Aldrin Barba Natanauan</span></h1>
-              <div class="profileInfo">
-                <div class="profileInfo-item">
-                  <i class='bxr  bxs-location'></i> 
-                  <p>Based in Hermosa, Bataan, Philippines</p>
+      </nav>
+      <main role="main">
+        <div id="profile" class="profile">
+          <div class="profileContainer">
+            <div class="profile-item">
+              <div id="profileImagesMobile" class="profileImages">
+                  <img src="images/aldrin2.webp" alt="Profile Image">
+              </div>
+              <div class="profileText">
+                <h1>Hi, I'm <span class="profile-highlight">Aldrin Barba Natanauan</span></h1>
+                <div class="profileInfo">
+                  <div class="profileInfo-item">
+                    <i class='bxr  bxs-location'></i> 
+                    <p>Based in Hermosa, Bataan, Philippines</p>
+                  </div>
+                  <div class="profileInfo-item">
+                    <i class='bxr  bxs-wrist-watch-round'></i> 
+                    <p>22 Years Old</p>
+                  </div>
+                  <div class="profileInfo-item">
+                    <i class='bxr  bxs-code'></i> 
+                    <p>Full Stack Developer</p>
+                  </div>
+                  <div class="profileInfo-item">
+                    <i class='bxr  bxs-calendar'></i> 
+                    <p>1+ Years of Experience</p>
+                  </div>
                 </div>
-                <div class="profileInfo-item">
-                  <i class='bxr  bxs-wrist-watch-round'></i> 
-                  <p>22 Years Old</p>
+                <div class="profileDescription">
+                  <p>
+                    I am an Information Technology graduate with a strong interest in
+                    web application development. I enjoy creating clean,
+                    functional, and user-friendly interfaces while continuously learning
+                    new technologies.
+                  </p>
                 </div>
-                <div class="profileInfo-item">
-                  <i class='bxr  bxs-code'></i> 
-                  <p>Full Stack Developer</p>
-                </div>
-                <div class="profileInfo-item">
-                  <i class='bxr  bxs-calendar'></i> 
-                  <p>1+ Years of Experience</p>
+                <div class="profileBtns">
+                  <button onclick="goTo('contact')">Get in Touch</button>
+                  <button onclick="window.open('documents/resume.pdf', '_blank', 'noopener,noreferrer')">
+                    View Resume
+                    <i class='bxrd  bx-arrow-out-up-right-stroke-square'></i> 
+                  </button>
                 </div>
               </div>
-              <div class="profileDescription">
-                <p>
-                  I am an Information Technology graduate with a strong interest in
-                  web application development. I enjoy creating clean,
-                  functional, and user-friendly interfaces while continuously learning
-                  new technologies.
-                </p>
+              
+              <div class="profileSkillServices">
+                <div id="profileImagesDesktop" class="profileImages">
+                  <img src="images/aldrin2crop.webp" alt="Profile Image">
+                </div>
+                <div class="profileSkills">
+                  <h1>Key Skills</h1>
+                  <div class="skill-list">
+                    <div class="skill-item">
+                      <i class="fa-brands fa-html5"></i>
+                      <p>HTML</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-css3-alt"></i>
+                      <p>CSS</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-node-js"></i>
+                      <p>JavaScript</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-php"></i>
+                      <p>PHP</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-solid fa-database"></i>
+                      <p>MySQL</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-react"></i>
+                      <p>React</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-css"></i>
+                      <p>TailwindCSS</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-node"></i>
+                      <p>Node.js</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-square-js"></i>
+                      <p>Express</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-git-alt"></i>
+                      <p>Git</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-brands fa-github"></i>
+                      <p>GitHub</p>
+                    </div>
+                    <div class="skill-item">
+                      <i class="fa-solid fa-square-binary"></i>
+                      <p>C#</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="profileBtns">
-                <button onclick="goTo('contact')">Get in Touch</button>
-                <button onclick="window.open('documents/resume.pdf', '_blank', 'noopener,noreferrer')">
-                  View Resume
-                  <i class='bxrd  bx-arrow-out-up-right-stroke-square'></i> 
-                </button>
-              </div>
+              
             </div>
             
-            <div class="profileSkillServices">
-              <div id="profileImagesDesktop" class="profileImages">
-                <img src="images/aldrin2crop.webp" alt="Profile Image">
+          </div>
+        </div>
+
+        <div id="projects" class="projects">
+          <div class="projectContainer">
+            <h1 class="section-title">Projects</h1>
+            <div class="project-list">
+              <div class="project-item">
+                <div class="projectText">
+                  <h2>SWAD Bataan Document Checklists</h2>
+                  <p>A Document Checklists Data Management System for the Department of Social Welfare and Development (DSWD). 
+                    I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
+                    and I also worked on the front-end side of things.</p>
+                </div>
+                <div class="projectImages">
+                  <img src="images/dswd.webp">
+                </div>
               </div>
-              <div class="profileSkills">
-                <h1>Key Skills</h1>
-                <div class="skill-list">
-                  <div class="skill-item">
-                    <i class="fa-brands fa-html5"></i>
-                    <p>HTML</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <p>CSS</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-node-js"></i>
-                    <p>JavaScript</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-php"></i>
-                    <p>PHP</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-solid fa-database"></i>
-                    <p>MySQL</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-react"></i>
-                    <p>React</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-css"></i>
-                    <p>TailwindCSS</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-node"></i>
-                    <p>Node.js</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-square-js"></i>
-                    <p>Express</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-git-alt"></i>
-                    <p>Git</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-brands fa-github"></i>
-                    <p>GitHub</p>
-                  </div>
-                  <div class="skill-item">
-                    <i class="fa-solid fa-square-binary"></i>
-                    <p>C#</p>
-                  </div>
+              <div class="project-item">
+                <div class="projectText">
+                  <h2>Herbhie: E-commerce on Herbal Plants</h2>
+                  <p>An e-commerce platform specialising in herbal plants, featuring email notifications to conveniently verify plant availability and facilitate purchases for plant enthusiasts. It also supports business owners in marketing their plants while offering information on cultivation techniques and proper usage of herbal plants. The system has 4 user roles: Super Admin, Admin, Customer, and Seller. The system is built using HTML, CSS, JavaScript, PHP, MySQL, and XAMPP. This is our college capstone project where I worked as the Lead Developer.</p>
+                </div>
+                <div class="projectImages">
+                  <img src="images/herbhie.webp">
+                  <img src="images/herbalpedia.webp">
                 </div>
               </div>
             </div>
-            
-          </div>
-          
-        </div>
-      </div>
-
-      <div id="projects" class="projects">
-        <div class="projectContainer">
-          <h1 class="section-title">Projects</h1>
-          <div class="project-list">
-            <div class="project-item">
-              <div class="projectText">
-                <h2>SWAD Bataan Document Checklists</h2>
-                <p>A Document Checklists Data Management System for the Department of Social Welfare and Development (DSWD). 
-                  I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
-                  and I also worked on the front-end side of things.</p>
-              </div>
-              <div class="projectImages">
-                <img src="images/dswd.webp">
-              </div>
-            </div>
-            <div class="project-item">
-              <div class="projectText">
-                <h2>Herbhie: E-commerce on Herbal Plants</h2>
-                <p>An e-commerce platform specialising in herbal plants, featuring email notifications to conveniently verify plant availability and facilitate purchases for plant enthusiasts. It also supports business owners in marketing their plants while offering information on cultivation techniques and proper usage of herbal plants. The system has 4 user roles: Super Admin, Admin, Customer, and Seller. The system is built using HTML, CSS, JavaScript, PHP, MySQL, and XAMPP. This is our college capstone project where I worked as the Lead Developer.</p>
-              </div>
-              <div class="projectImages">
-                <img src="images/herbhie.webp">
-                <img src="images/herbalpedia.webp">
-              </div>
-            </div>
           </div>
         </div>
-      </div>
 
-      <div id="experience" class="experience">
-        <div class="expContainer">
-          <h1 class="section-title">Experience</h1>
-          <div class="experience-list">
-            <div class="experience-item">
-              <div class="expText">
-                <h2>Full Stack Developer | Capstone Project</h2>
-                <h3>Bataan Peninsula State University</h3>
-                <h3 class="exp-date">June 2024 - January 2025</h3>
-                <p>Developed a working e-commerce web application that involves the users (sellers and customers) 
-                  to buy and sell herbs while also helping to spread information about the uses, benefits, and 
-                  reminders about different herbs. This was our capstone project, and I worked as the Lead Developer. 
-                  I did the front-end and back-end development of the system using mainly HTML, PHP, MySQL, JavaScript, and AJAX.</p>
-              </div>
-              <div class="expImages">
-                <img src="images/capstone.webp">
-              </div>
-            </div>
-            <div class="experience-item">
-              <div class="expText">
-                <h2>Back-end Developer | On the Job Training</h2>
-                <h3>Department of Social Welfare and Development</h3>
-                <h3 class="exp-date">February 2025 - May 2025</h3>
-                <p>Trained for 513 hours and 12 minutes in the Department of Social Welfare and Development (DSWD) as a back-end developer and IT support. I developed a data management system for the Department of Social Welfare and Development (DSWD) using JavaScript, PHP, and MySQL.</p>
-              </div>
-              <div class="expImages">
-                <img src="images/ojt1.webp">
-                <img src="images/ojt2.webp">
-              </div>
-            </div>
-            <div class="experience-item">
-              <div class="expText">
-                <h2>Computer Systems Servicing NCII</h2>
-                <h3>ADA Technical Foundation Inc.- Hermosa, Bataan</h3>
-                <h3 class="exp-date">September 2025 - November 2025</h3>
-                <p>Trained for 2 months in ADA Technical Foundation Inc., a TESDA accredited training center for Computer Systems Servicing NCII. Here, I learned how to troubleshoot computer hardware and software issues. I also learned how to configure and maintain computer networks. Lastly, I learned how to install windows servers, configure DNS, configure DHCP, configure Active Directory, and connect multiple devices to a domain.</p>
-              </div>
-              <div class="expImages">
-                <img src="images/csstesda1.webp">
-                <img src="images/csstesda2.webp">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div id="about" class="about">
-        <div class="aboutContainer">
-
-          <div class="aboutImages">
-            <img src="images/aldrin.webp" alt="Profile Image">
-          </div>
-
-          <div class="about-list">
-
-            <div class="about-item">
-              <div class="aboutText">
-                <h1><span class="highlight">Aldrin Barba Natanauan</span></h1>
-                
-                <div class="education">
-                  <div class="edu-item">
-                    <i class='bxr  bx-education'></i>
-                    <p>Bachelor of Science in Information Technology</p>
-                  </div>
-                  <div class="edu-item">
-                    <i class='bxr  bx-book-library'></i> 
-                    <p>Major in Network and Web Application</p>
-                  </div>
-                  <div class="edu-item">
-                    <i class='bxr  bx-school'></i> 
-                    <p>Bataan Peninsula State University</p>
-                  </div>
+        <div id="experience" class="experience">
+          <div class="expContainer">
+            <h1 class="section-title">Experience</h1>
+            <div class="experience-list">
+              <div class="experience-item">
+                <div class="expText">
+                  <h2>Full Stack Developer | Capstone Project</h2>
+                  <h3>Bataan Peninsula State University</h3>
+                  <h3 class="exp-date">June 2024 - January 2025</h3>
+                  <p>Developed a working e-commerce web application that involves the users (sellers and customers) 
+                    to buy and sell herbs while also helping to spread information about the uses, benefits, and 
+                    reminders about different herbs. This was our capstone project, and I worked as the Lead Developer. 
+                    I did the front-end and back-end development of the system using mainly HTML, PHP, MySQL, JavaScript, and AJAX.</p>
                 </div>
-
-                <p class="summary">
-                  As a Full Stack Developer, I focus on creating 
-                  well-structured systems, modern interfaces, and solutions that 
-                  provide real value to users. I enjoy solving difficult 
-                  problems, learning new technologies, and continuously improving 
-                  my craft. When I'm not coding, I spend time exploring new skills and hobbies that might help me grow as an individual.
-                </p>
+                <div class="expImages">
+                  <img src="images/capstone.webp">
+                </div>
+              </div>
+              <div class="experience-item">
+                <div class="expText">
+                  <h2>Back-end Developer | On the Job Training</h2>
+                  <h3>Department of Social Welfare and Development</h3>
+                  <h3 class="exp-date">February 2025 - May 2025</h3>
+                  <p>Trained for 513 hours and 12 minutes in the Department of Social Welfare and Development (DSWD) as a back-end developer and IT support. I developed a data management system for the Department of Social Welfare and Development (DSWD) using JavaScript, PHP, and MySQL.</p>
+                </div>
+                <div class="expImages">
+                  <img src="images/ojt1.webp">
+                  <img src="images/ojt2.webp">
+                </div>
+              </div>
+              <div class="experience-item">
+                <div class="expText">
+                  <h2>Computer Systems Servicing NCII</h2>
+                  <h3>ADA Technical Foundation Inc.- Hermosa, Bataan</h3>
+                  <h3 class="exp-date">September 2025 - November 2025</h3>
+                  <p>Trained for 2 months in ADA Technical Foundation Inc., a TESDA accredited training center for Computer Systems Servicing NCII. Here, I learned how to troubleshoot computer hardware and software issues. I also learned how to configure and maintain computer networks. Lastly, I learned how to install windows servers, configure DNS, configure DHCP, configure Active Directory, and connect multiple devices to a domain.</p>
+                </div>
+                <div class="expImages">
+                  <img src="images/csstesda1.webp">
+                  <img src="images/csstesda2.webp">
+                </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <!-- Hobbies -->
-            <div class="about-item">
-              <div class="aboutText">
-                <h2>Hobbies & Interests</h2>
-                <ul class="simple-list">
-                  <li>Watching technology-related videos</li>
-                  <li>Learning new programming concepts</li>
-                  <li>Playing FPS, RPG and strategy games</li>
-                  <li>Watching anime and reading manga</li>
-                </ul>
+        <div id="about" class="about">
+          <div class="aboutContainer">
+
+            <div class="aboutImages">
+              <img src="images/aldrin.webp" alt="Profile Image">
+            </div>
+
+            <div class="about-list">
+
+              <div class="about-item">
+                <div class="aboutText">
+                  <h1><span class="highlight">Aldrin Barba Natanauan</span></h1>
+                  
+                  <div class="education">
+                    <div class="edu-item">
+                      <i class='bxr  bx-education'></i>
+                      <p>Bachelor of Science in Information Technology</p>
+                    </div>
+                    <div class="edu-item">
+                      <i class='bxr  bx-book-library'></i> 
+                      <p>Major in Network and Web Application</p>
+                    </div>
+                    <div class="edu-item">
+                      <i class='bxr  bx-school'></i> 
+                      <p>Bataan Peninsula State University</p>
+                    </div>
+                  </div>
+
+                  <p class="summary">
+                    As a Full Stack Developer, I focus on creating 
+                    well-structured systems, modern interfaces, and solutions that 
+                    provide real value to users. I enjoy solving difficult 
+                    problems, learning new technologies, and continuously improving 
+                    my craft. When I'm not coding, I spend time exploring new skills and hobbies that might help me grow as an individual.
+                  </p>
+                </div>
               </div>
+
+              <!-- Hobbies -->
+              <div class="about-item">
+                <div class="aboutText">
+                  <h2>Hobbies & Interests</h2>
+                  <ul class="simple-list">
+                    <li>Watching technology-related videos</li>
+                    <li>Learning new programming concepts</li>
+                    <li>Playing FPS, RPG and strategy games</li>
+                    <li>Watching anime and reading manga</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div id="contact" class="contact">
+          <div class="contactContainer">
+            <h1 class="section-title">Contact</h1>
+            <div class="contactDescription">
+              <p class="contact-description">
+                Feel free to reach out to me for collaborations, opportunities, or any inquiries.
+              </p>
+            </div>
+            <div class="contact-list">
+
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=aldrinnatanauan24@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item"
+              >
+                <i class="fa-regular fa-envelope contact-icon"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>aldrinnatanauan24@gmail.com</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.github.com/AldrinNatanauan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item"
+              >
+                <i class="fa-brands fa-github contact-icon"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p>github.com/AldrinNatanauan</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/aldrin-natanauan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item"
+              >
+                <i class="fa-brands fa-square-linkedin contact-icon"></i>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p>linkedin.com/in/aldrin-natanauan</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.onlinejobs.ph/jobseekers/info/4613060"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item"
+              >
+                <i class="fa-solid fa-globe contact-icon"></i>
+                <div>
+                  <h3>Onlinejobs.ph</h3>
+                  <p>onlinejobs.ph/jobseekers/info/4613060</p>
+                </div>
+              </a>
+
             </div>
 
           </div>
         </div>
-      </div>
 
+      </main>
 
-      <div id="contact" class="contact">
-        <div class="contactContainer">
-          <h1 class="section-title">Contact</h1>
-          <div class="contactDescription">
-            <p class="contact-description">
-              Feel free to reach out to me for collaborations, opportunities, or any inquiries.
-            </p>
-          </div>
-          <div class="contact-list">
-
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=aldrinnatanauan24@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item"
-            >
-              <i class="bx bx-envelope contact-icon"></i>
-              <div>
-                <h3>Email</h3>
-                <p>aldrinnatanauan24@gmail.com</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.github.com/AldrinNatanauan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item"
-            >
-              <i data-lucide="github" class="contact-icon"></i>
-              <div>
-                <h3>GitHub</h3>
-                <p>github.com/AldrinNatanauan</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/aldrin-natanauan/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item"
-            >
-              <i class="bx bxl-linkedin contact-icon"></i>
-              <div>
-                <h3>LinkedIn</h3>
-                <p>linkedin.com/in/aldrin-natanauan</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.onlinejobs.ph/jobseekers/info/4613060"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item"
-            >
-              <i class="bx bx-globe-alt-2 contact-icon"></i>
-              <div>
-                <h3>Onlinejobs.ph</h3>
-                <p>onlinejobs.ph/jobseekers/info/4613060</p>
-              </div>
-            </a>
-
-          </div>
-
-        </div>
-      </div>
+      <footer class="footer">
+        <p hidden>&copy; 2026 Aldrin B. Natanauan. All rights reserved.</p>
+      </footer>
 
     </div>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
     <script src="index.js"></script>
   </body>
 </html>
