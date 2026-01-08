@@ -1251,12 +1251,12 @@ body{
         flex-direction: column;
     }
     .socials-withText{
-        border-top: 2px solid var(--colorb);
         border-left: none;
-        padding-top: var(--padding-xxs);
         padding-left: 0;
     }
     .socials .socials-withText p{
+        border-top: 2px solid var(--colorb);
+        padding-top: var(--padding-xxs);
         font-size: 15px;
     }
 }
