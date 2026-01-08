@@ -747,7 +747,6 @@ body{
     margin-top: var(--margin-xs);
 }
 .social-item{
-    background-color: var(--gray30);
     color: var(--colorb);
     font-size: 30px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
