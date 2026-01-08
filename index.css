@@ -140,6 +140,9 @@ body{
     font-size: 11px; 
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
+#btn-top i {
+    font-size: 20px;
+}
 #btn-top.show {
     opacity: 1;
     visibility: visible;
@@ -704,6 +707,65 @@ body{
 .contact-item:hover p{
     text-decoration: underline;
 }
+.socials{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--margin-xl);
+}
+.socials-withText{
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-xxs);
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    padding-left: var(--padding-m);
+    border-left: 3px solid var(--colorb);
+}
+.socials .socials-withText p{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--gray90);
+    margin: 0;
+}
+.socials-img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gray50);
+    margin: 0;
+}
+.socials-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: var(--margin-xs);
+}
+.social-item{
+    background-color: var(--gray30);
+    color: var(--colorb);
+    font-size: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.social-item:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+.social-item i{
+    font-size: 40px;
+    padding: 5px;
+    margin: 0;
+}
 
 /* About */
 .about {
@@ -1183,5 +1245,17 @@ body{
     .contact-item {
         padding: var(--padding-s) var(--padding-xxs);
         gap: 15px;
+    }
+    .socials{
+        flex-direction: column;
+    }
+    .socials-withText{
+        border-top: 2px solid var(--colorb);
+        border-left: none;
+        padding-top: var(--padding-xxs);
+        padding-left: 0;
+    }
+    .socials .socials-withText p{
+        font-size: 15px;
     }
 }
