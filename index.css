@@ -26,6 +26,9 @@
     --gray90: hsl(0, 0%, 90%);
     --colora: #07553B;
     --colorb: #CED46A;
+
+    /* Fonts */
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 body{
@@ -68,7 +71,7 @@ body{
     margin: 0 var(--margin-m);
     right: 0;
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     padding: 0px 10px;
     cursor: pointer;
     transition: width 0.3s ease;
@@ -308,13 +311,13 @@ body{
     .profile-item .profileInfo-item p{
         font-size: 20px;
         color: var(--gray70);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: var(--font-family);
     }
     .profile-item .profileDescription p{
         font-size: 20px;
         color: var(--gray90);
         text-align: justify;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: var(--font-family);
     }
     .profileBtns{
         display: flex;
@@ -358,12 +361,12 @@ body{
 
 .profile h1{
     font-size: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-bottom: 0px;
 }
 .profile p{
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-top: var(--margin-m);
     margin-bottom: 0px;
     color: var(--gray90);
@@ -446,12 +449,12 @@ body{
 }
 .projectText h2{
     font-size: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-bottom: 0px;
 }
 .projectText p{
     font-size: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-top: 30px;
     color: var(--gray70);
     text-align: justify;
@@ -524,7 +527,7 @@ body{
     margin-bottom: 5vh;
     font-size: 50px;
     color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
 }
 .section-title::after {
     content: "";
@@ -578,19 +581,19 @@ body{
 }
 .experience-list h2{
     font-size: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-bottom: 0px;
 }
 .experience-list h3{
     font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-bottom: 0px;
     margin-top: var(--margin-xs);
     color: var(--gray90);
 }
 .experience-list .exp-date{
     font-size: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-bottom: 0px;
     margin-top: var(--margin-xs);
     color: var(--gray70);
@@ -599,7 +602,7 @@ body{
 }
 .experience-list p{
     font-size: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-top: var(--margin-xl);
     color: var(--gray70);
     text-align: justify;
@@ -659,7 +662,7 @@ body{
     color: white;
     margin-top: 0px;
     margin-bottom: 40px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:var(--font-family);
 }
 .contact-list {
     display: grid;
@@ -695,12 +698,12 @@ body{
     margin: 0;
     font-size: 18px;
     color: #003d0a;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:var(--font-family);
 }
 .contact-item p {
     margin: 3px 0 0;
     font-size: 15px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:var(--font-family);
     color: #087f23;
     text-decoration: none;
 }
@@ -728,7 +731,7 @@ body{
 }
 .socials .socials-withText p{
     font-size: 20px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:var(--font-family);
     color: var(--gray90);
     margin: 0;
 }
@@ -848,14 +851,14 @@ body{
 .aboutText h1 {
     font-size: 2.8rem;
     color: var(--gray90);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-bottom: var(--margin-xxs);
     margin-top: 0px;
 }
 .aboutText h2 {
     font-size: 2rem;
     color: var(--gray90);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -903,18 +906,18 @@ body{
         margin: 0px;
         font-size: 20px;
         color: var(--gray70);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: var(--font-family);
     }
 .aboutText .summary{
     font-size: 20px;
     color: var(--gray90);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
 }
 .aboutText .simple-list{
     margin: 0;
     font-size: 20px;
     color: var(--gray70);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: var(--font-family);
 }
 
 
