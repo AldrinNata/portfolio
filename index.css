@@ -24,16 +24,17 @@
     --gray50: hsl(0, 0%, 50%);
     --gray70: hsl(0, 0%, 70%);
     --gray90: hsl(0, 0%, 90%);
-    --colora: #07553B;
-    --colorb: #CED46A;
+    --colora: #333333;
+    --colorb: #539BF5;
+    --colorc: #010409;
 
     /* Fonts */
-    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body{
-    background-color: black;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6)), url('images/bg.webp');
+    background-color: var(--colorc);
+    background: linear-gradient(135deg, #0D1117 0%, #161B22 100%);
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -53,6 +54,7 @@ body{
     z-index: 9999;
     padding: 0px;
     height: 10vh;
+    background-color: var(--colorc);
 }
 .navBar.disabled {
     pointer-events: none;
@@ -62,8 +64,7 @@ body{
     display: flex;
     justify-content: flex-end;
     z-index: 1;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-right: 2vw;
 }
 .navBar a{
     color: white;
@@ -126,6 +127,20 @@ body{
     transition: width 0.3s ease;
 }
 
+/* Icon */
+.iconContainer{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2vw;
+}
+.iconContainer .nav-icon img{
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
 #btn-top {
     opacity: 0;
     visibility: hidden;
@@ -135,8 +150,8 @@ body{
     z-index: 98; 
     border: none; 
     outline: none;
-    background-color: var(--colora); 
-    color: white; 
+    background-color: var(--colorb); 
+    color: var(--gray90); 
     cursor: pointer; 
     padding: 15px; 
     border-radius: 10px; 
@@ -151,8 +166,8 @@ body{
     visibility: visible;
 }
 #btn-top:hover {
-    background-color: var(--colorb);
-    color: black;
+    background-color: var(--colora);
+    color: var(--gray90);
 }
 
 /* Profile */
@@ -175,26 +190,6 @@ body{
 #profile.show{
     opacity: 1;
     transform: translateX(0);
-}
-#profile.about{
-    opacity: 0;
-    transform: translateX(80px);
-    pointer-events: none;
-}
-#profile.contact{
-    opacity: 0;
-    transform: translateX(80px);
-    pointer-events: none;
-}
-#profile.experience{
-    opacity: 0;
-    transform: translateX(80px);
-    pointer-events: none;
-}
-#profile.projects{
-    opacity: 0;
-    transform: translateX(80px);
-    pointer-events: none;
 }
 
 
@@ -244,7 +239,7 @@ body{
         border-radius: 999px;
         box-shadow: 0 6px 18px rgba(0,0,0,0.6);
         cursor: default;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, translate 0.3s ease;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -256,7 +251,8 @@ body{
         font-size: 20px;
     }
     .profileSkills .skill-list .skill-item:hover{
-        background-color: var(--gray10);
+        background-color: var(--colora);
+        translate: 0px -5px;
     }
     .profileSkills .skill-list .skill-item p{
         margin: 0px;
@@ -335,10 +331,18 @@ body{
         padding-top: 2px;
         padding-bottom: 1px;
     }
+    #view-resume{
+        background: transparent;
+        color: var(--gray90);
+        border: 1px solid var(--gray30);
+        transition: border-color 0.3s ease;
+        font-weight: normal;
+    }
+    #view-resume:hover{
+        color: var(--colorb);
+        border-color: var(--colorb);
+    }
 
-/* #profile:nth-child(even){
-    flex-direction: row-reverse;
-} */
  #profileImagesMobile{
     display: none;
  }
@@ -363,6 +367,7 @@ body{
     font-size: 50px;
     font-family: var(--font-family);
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 .profile p{
     font-size: 20px;
@@ -375,18 +380,19 @@ body{
     width: fit-content;
     padding: 10px 30px;
     background-color: var(--colorb);
-    color: black;
+    color: var(--gray90);
     border: none;
     border-radius: 2px;
     font-size: 15px;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-family);
+    font-weight: bold;
     cursor: pointer;
     margin-top: 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .profile button:hover{
     background-color: var(--colora);
-    color: white;
+    color: var(--gray90);
 }
 
 /* Projects */
@@ -402,26 +408,7 @@ body{
     opacity: 1;
     transform: translateY(0);
 }
-#projects.profile{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#projects.about{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#projects.contact{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#projects.experience{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
+
 .projectContainer{
     margin-left: 15vw;
     margin-right: 15vw;
@@ -496,26 +483,7 @@ body{
     opacity: 1;
     transform: translateY(0);
 }
-#experience.profile{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#experience.about{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#experience.contact{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#experience.projects{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
+
 .expContainer{
     margin-left: 15vw;
     margin-right: 15vw;
@@ -624,26 +592,7 @@ body{
     opacity: 1;
     transform: translateX(0);
 }
-#contact.profile{
-    opacity: 0;
-    transform: translateX(-80px);
-    pointer-events: none;
-}
-#contact.about{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#contact.experience{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
-#contact.projects{
-    opacity: 0;
-    transform: translateY(80px);
-    pointer-events: none;
-}
+
 .contactContainer{
     display: flex;
     flex-direction: column;
@@ -691,20 +640,20 @@ body{
 }
 .contact-icon {
     font-size: 30px;
-    color: var(--colora);
+    color: var(--colorc);
     width: 30px;
 }
 .contact-item h3 {
     margin: 0;
     font-size: 18px;
-    color: #003d0a;
+    color: var(--colora);
     font-family:var(--font-family);
 }
 .contact-item p {
     margin: 3px 0 0;
     font-size: 15px;
     font-family:var(--font-family);
-    color: #087f23;
+    color: var(--colorb);
     text-decoration: none;
 }
 .contact-item:hover p{
@@ -788,26 +737,7 @@ body{
     opacity: 1;
     transform: translateX(0);
 }
-#about.profile{
-    opacity: 0;
-    transform: translateX(-80px);
-    pointer-events: none;
-}
-#about.contact{
-    opacity: 0;
-    transform: translateX(-80px);
-    pointer-events: none;
-}
-#about.experience{
-    opacity: 0;
-    transform: translateX(-80px);
-    pointer-events: none;
-}
-#about.projects{
-    opacity: 0;
-    transform: translateX(-80px);
-    pointer-events: none;
-}
+
 .aboutContainer {
     display: flex;
     flex-direction: row;
@@ -921,40 +851,16 @@ body{
 }
 
 
-.resumeBtn {
-    margin-top: var(--margin-m);
-    padding: var(--padding-s) var(--padding-l);
-    background-color: var(--colorb);
-    color: var(--gray10);
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: background-color .2s ease, transform .2s ease;
-    width: fit-content;
-}
-.resumeBtn:hover {
-    background-color: var(--colora);
-    color: var(--gray90);
-    transform: translateY(-2px);
-}
-
-
 /* Mobile Responsive */
 @media (max-width: 800px) {
     body {
         margin: 0;
-        background: black;
     }
     body::before {
         content: "";
         position: fixed;
         inset: 0;
         z-index: -1;
-
-        background-image:
-            linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)),
-            url("images/bgphone.webp");
-
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -970,7 +876,6 @@ body{
         justify-content: center;
         align-items: center;
         background: rgba(0,0,0,0.55); 
-        border-radius: 999px;
         box-shadow: 0 6px 18px rgba(0,0,0,0.6);
         z-index: 9999;
         margin: 0;               
@@ -990,6 +895,13 @@ body{
         margin: 0;          
         color: var(--gray90);
     }
+    .iconContainer{
+        display: none;
+    }
+    .iconContainer .nav-icon img{
+        display: none;
+    }
+    
     #btn-top {
         display: none;
     }

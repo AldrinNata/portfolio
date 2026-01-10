@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Aldrin B. Natanauan</title>
+    <title>Aldrin B. Natanauan | Portfolio</title>
+    <link rel="icon" type="image/png" href="images/icons/icon6.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#00490c">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="description" content="Creator: Aldrin B. Natanauan, Web Developer, Front-End Developer, Back-End Developer">
 
     <link rel="stylesheet" href="index.css">
@@ -16,6 +18,11 @@
     <button onclick="topFunction()" id="btn-top" title="Go to top"><i class='bxr  bx-caret-up'></i><br>Top</button> 
     <div class="container">
       <nav role="navigation" class="navBar">
+        <div class="iconContainer">
+          <a onclick="goTo('profile')" class="nav-icon">
+            <img src="images/icons/icon6.ico" alt="Aldrin B. Natanauan Icon">
+          </a>
+        </div>
         <div class="lists">
           <a id="home-btn" onclick="goTo('profile')">Home</a>
           <a id="projects-btn" onclick="goTo('projects')">Projects</a>
@@ -60,8 +67,8 @@
                   </p>
                 </div>
                 <div class="profileBtns">
-                  <button onclick="goTo('contact')">Get in Touch</button>
-                  <button onclick="window.open('documents/resume.pdf', '_blank', 'noopener,noreferrer')">
+                  <button onclick="goTo('contact')" id="get-in-touch">Get in Touch</button>
+                  <button onclick="window.open('documents/resume.pdf', '_blank', 'noopener,noreferrer')" id="view-resume">
                     View Resume
                     <i class='bxrd  bx-arrow-out-up-right-stroke-square'></i> 
                   </button>
@@ -356,7 +363,7 @@
                     <i class="fa-brands fa-square-instagram"></i>
                   </a>
                   <a
-                    href="https://www.x.com/in/aldrin_natanauan/"
+                    href="https://www.x.com/NatanauanA69081/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="social-item"
