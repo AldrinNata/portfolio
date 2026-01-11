@@ -19,16 +19,16 @@
     <div class="container">
       <nav role="navigation" class="navBar">
         <div class="iconContainer">
-          <a onclick="goTo('profile')" class="nav-icon">
+          <a href="/" onclick="handleNav(event, 'profile')" class="nav-icon">
             <img src="images/icons/icon.ico" alt="Aldrin B. Natanauan Icon">
           </a>
         </div>
         <div class="lists">
-          <a id="home-btn" onclick="goTo('profile')">Home</a>
-          <a id="projects-btn" onclick="goTo('projects')">Projects</a>
-          <a id="experience-btn" onclick="goTo('experience')">Experience</a>
-          <a id="about-btn" onclick="goTo('about')">About</a>
-          <a id="contact-btn" onclick="goTo('contact')">Contact</a>
+          <a id="home-btn" href="/" onclick="handleNav(event, 'profile')">Home</a>
+          <a id="projects-btn" href="#projects" onclick="handleNav(event, 'projects')">Projects</a>
+          <a id="experience-btn" href="#experience" onclick="handleNav(event, 'experience')">Experience</a>
+          <a id="about-btn" href="#about" onclick="handleNav(event, 'about')">About</a>
+          <a id="contact-btn" href="#contact" onclick="handleNav(event, 'contact')">Contact</a>
         </div>
       </nav>
       <main role="main">
@@ -67,7 +67,7 @@
                   </p>
                 </div>
                 <div class="profileBtns">
-                  <button onclick="goTo('contact')" id="get-in-touch">Get in Touch</button>
+                  <button href="#contact" onclick="handleNav(event, 'contact')" id="get-in-touch">Get in Touch</button>
                   <button onclick="window.open('documents/resume.pdf', '_blank', 'noopener,noreferrer')" id="view-resume">
                     View Resume
                     <i class='bxrd  bx-arrow-out-up-right-stroke-square'></i> 
@@ -343,6 +343,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="social-item"
+                    title="GitHub"
                   >
                     <i class="fa-brands fa-github"></i>
                   </a>
@@ -351,6 +352,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="social-item"
+                    title="Facebook"
                   >
                     <i class="fa-brands fa-facebook"></i>
                   </a>
@@ -359,6 +361,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="social-item"
+                    title="Instagram"
                   >
                     <i class="fa-brands fa-square-instagram"></i>
                   </a>
@@ -367,6 +370,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="social-item"
+                    title="X (Twitter)"
                   >
                     <i class="fa-brands fa-square-x-twitter"></i>
                   </a>

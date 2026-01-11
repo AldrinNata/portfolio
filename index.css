@@ -67,7 +67,7 @@ body{
     margin-right: 2vw;
 }
 .navBar a{
-    color: white;
+    color: var(--gray90);
     text-decoration: none;
     margin: 0 var(--margin-m);
     right: 0;
@@ -151,12 +151,12 @@ body{
     border: none; 
     outline: none;
     background-color: var(--colorb); 
-    color: var(--gray90); 
+    color: var(--colora); 
     cursor: pointer; 
     padding: 15px; 
     border-radius: 10px; 
     font-size: 11px; 
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease, background-color 0.3s ease, color 0.3s ease;
 }
 #btn-top i {
     font-size: 20px;
@@ -174,7 +174,7 @@ body{
 #profile{
     display: flex;
     flex-direction: row;
-    color: white;
+    color: var(--gray90);
     z-index: 1;
     height: 100%;
     align-items: center;
@@ -335,7 +335,7 @@ body{
         background: transparent;
         color: var(--gray90);
         border: 1px solid var(--gray30);
-        transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease, color 0.3s ease;
         font-weight: normal;
     }
     #view-resume:hover{
@@ -380,7 +380,7 @@ body{
     width: fit-content;
     padding: 10px 30px;
     background-color: var(--colorb);
-    color: var(--gray90);
+    color: var(--colora);
     border: none;
     border-radius: 2px;
     font-size: 15px;
@@ -398,7 +398,7 @@ body{
 /* Projects */
 .projects{
     background-color: transparent;
-    color: #fff;
+    color: var(--gray90);
     flex-direction: column;
     opacity: 0;
     transform: translateY(-80px);
@@ -473,7 +473,7 @@ body{
 /* Experience */
 .experience {
     background-color: transparent;
-    color: #fff;
+    color: var(--gray90);
     flex-direction: column;
     opacity: 0;
     transform: translateY(-80px);
@@ -494,7 +494,7 @@ body{
     position: relative;
     margin-bottom: 5vh;
     font-size: 50px;
-    color: #fff;
+    color: var(--gray90);
     font-family: var(--font-family);
 }
 .section-title::after {
@@ -579,7 +579,7 @@ body{
 /* Contact */
 .contact{
     background-color: transparent;
-    color: #fff;
+    color: var(--gray90);
     flex-direction: column;
     justify-content: center;
     height: 100%;
@@ -608,7 +608,7 @@ body{
 }
 .contact-description {
     font-size: 20px;
-    color: white;
+    color: var(--gray90);
     margin-top: 0px;
     margin-bottom: 40px;
     font-family:var(--font-family);
@@ -620,7 +620,7 @@ body{
     flex: 1;
 }
 .contact-item {
-    background: white;
+    background: var(--gray90);
     border-left: 20px solid var(--colorb);
     padding: 25px;
     border-radius: 12px;
@@ -723,7 +723,7 @@ body{
 /* About */
 .about {
     background-color: transparent;
-    color: #fff;
+    color: var(--gray90);
     flex-direction: column;
     height: 100%;
     align-items: center;
@@ -913,7 +913,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color: white;
+        color: var(--gray90);
         z-index: 1;
         height: 100%;
         padding-top: 0px;
@@ -1165,7 +1165,7 @@ body{
     }
     .contact-description {
         font-size: 15px;
-        color: white;
+        color: var(--gray90);
         margin-bottom: 20px;
     }
     .contact-list {
