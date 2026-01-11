@@ -33,13 +33,14 @@ const navButtons = {
 let currentSection = "profile";
 
 function handleNav(e, target) {
-  e.preventDefault(); // prevent default jump
+  e.preventDefault();
   goTo(target);
+
   if (target === "profile") {
-    history.pushState(null, "", `/`);
+    history.pushState(null, "", `/portfolio/`);
     return;
   }
-  history.pushState(null, "", `#${target}`);
+  history.pushState(null, "", "#" + target);
 }
 
 
