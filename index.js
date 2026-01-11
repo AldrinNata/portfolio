@@ -1,6 +1,4 @@
-/* =========================
-   BACK TO TOP BUTTON
-========================= */
+/* BACK TO TOP BUTTON */
 const topBtn = document.getElementById("btn-top");
 
 window.addEventListener("scroll", () => {
@@ -15,9 +13,7 @@ topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-/* =========================
-   PAGE NAVIGATION
-========================= */
+/* PAGE NAVIGATION */
 const sections = {
   profile: document.getElementById("profile"),
   projects: document.getElementById("projects"),
@@ -36,9 +32,18 @@ const navButtons = {
 
 let currentSection = "profile";
 
-/* =========================
-   INITIAL STATE
-========================= */
+function handleNav(e, target) {
+  e.preventDefault(); // prevent default jump
+  goTo(target);
+  if (target === "profile") {
+    history.pushState(null, "", `/`);
+    return;
+  }
+  history.pushState(null, "", `#${target}`);
+}
+
+
+/* INITIAL STATE */
 document.addEventListener("DOMContentLoaded", () => {
   Object.keys(sections).forEach(key => {
     sections[key].style.display = "none";
@@ -48,11 +53,25 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.profile.style.display = "flex";
   sections.profile.classList.add("show");
   navButtons.profile.classList.add("active");
+
+  // Check URL hash for initial section
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    goTo(hash);
+  }
+
+  window.addEventListener("hashchange", () => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      goTo(hash);
+    }
+    else {
+      goTo("profile");
+    }
+  });
 });
 
-/* =========================
-   GO TO SECTION
-========================= */
+/* GO TO SECTION */
 function goTo(target) {
   if (target === currentSection) return;
 
