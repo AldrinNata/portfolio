@@ -33,7 +33,7 @@
 }
 
 body{
-    background-color: var(--colorc);
+    background-color: black;
     background: linear-gradient(135deg, #0D1117 0%, #161B22 100%);
     background-size: cover;
     background-attachment: fixed;
@@ -855,6 +855,7 @@ body{
 @media (max-width: 800px) {
     body {
         margin: 0;
+        background-color: black;
     }
     body::before {
         content: "";
