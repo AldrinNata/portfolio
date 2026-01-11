@@ -866,6 +866,9 @@ body{
         background-position: center;
         background-repeat: no-repeat;
     }
+    input, textarea, button, select, a {
+        -webkit-tap-highlight-color: transparent;
+    }
     .navBar {
         position: fixed;
         height: 5vh;
