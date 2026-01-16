@@ -420,12 +420,14 @@ body{
 .project-list{
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 5vh;
 }
 .project-item{
     display: flex;
     gap: 5vw;
     align-items: center;
+    border: 1px solid var(--gray30);
+    padding: 5vh;
 }
 .project-item:nth-child(odd){
     flex-direction: row-reverse;
@@ -575,12 +577,14 @@ body{
 .experience-list {
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 5vh;
 }
 .experience-item{
     display: flex;
     gap: 5vw;
     align-items: center;
+    border: 1px solid var(--gray30);
+    padding: 5vh;
 }
 .experience-item:nth-child(odd){
     flex-direction: row-reverse;
@@ -1284,6 +1288,7 @@ body.image-viewer-open {
     .project-item{
         flex-direction: column;
         gap: 1vh;
+        padding: 2.5vh;
     }
     .project-item:nth-child(odd){
         flex-direction: column;
@@ -1293,6 +1298,7 @@ body.image-viewer-open {
     }
     .projectText h2{
         font-size: 20px;
+        margin-top: 0px;
     }
     .projectText p{
         font-size: 15px;
@@ -1322,6 +1328,7 @@ body.image-viewer-open {
     .experience-item{
         flex-direction: column;
         gap: 1vh;
+        padding: 2.5vh;
     }
     .experience-item:nth-child(odd){
         flex-direction: column;
@@ -1331,6 +1338,7 @@ body.image-viewer-open {
     }
     .expText h2{
         font-size: 20px;
+        margin-top: 0px;
     }
     .expText h3{
         font-size: 15px;
