@@ -1,26 +1,39 @@
 // BACK TO TOP BUTTON
 const topBtn = document.getElementById("btn-top");
+let isScrollingToTop = false;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    topBtn.classList.add("show");
-  } else {
-    topBtn.classList.remove("show");
+  topBtn.classList.toggle("show", window.scrollY > 200);
+});
+
+window.addEventListener("scroll", () => {
+  if (isScrollingToTop) return;
+
+  if (window.scrollY < 150 && !window.location.hash) {
+    setHomeActive();
   }
 });
 
 topBtn.addEventListener("click", () => {
+  isScrollingToTop = true;
+
+  history.replaceState(null, "", window.location.pathname);
+
+  setHomeActive();
+
   window.scrollTo({ top: 0, behavior: "smooth" });
+
+  setTimeout(() => {
+    isScrollingToTop = false;
+  }, 600);
 });
 
-// SECTION NAVIGATION
-const sections = {
-  profile: document.getElementById("profile"),
-  projects: document.getElementById("projects"),
-  experience: document.getElementById("experience"),
-  about: document.getElementById("about"),
-  contact: document.getElementById("contact")
-};
+
+
+// SECTION + NAV MAP
+const sections = document.querySelectorAll(
+  "#projects, #experience, #about, #contact"
+);
 
 const navButtons = {
   profile: document.getElementById("home-btn"),
@@ -30,72 +43,80 @@ const navButtons = {
   contact: document.getElementById("contact-btn")
 };
 
-let currentSection = "profile";
-
-function handleNav(e, target) {
-  e.preventDefault();
-  goTo(target);
-
-  if (target === "profile") {
-    history.pushState(null, "", `/portfolio/`);
-    return;
-  }
-  history.pushState(null, "", "#" + target);
+function setHomeActive() {
+  Object.values(navButtons).forEach(btn =>
+    btn.classList.remove("active")
+  );
+  navButtons.profile.classList.add("active");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  Object.keys(sections).forEach(key => {
-    sections[key].style.display = "none";
-    sections[key].classList.remove("show");
-  });
 
-  sections.profile.style.display = "flex";
-  sections.profile.classList.add("show");
-  navButtons.profile.classList.add("active");
+// SMOOTH SCROLL ON NAV CLICK (crawlable)
+Object.values(navButtons).forEach(btn => {
+  btn.addEventListener("click", e => {
+    const targetId = btn.getAttribute("href").replace("#", "");
+    const targetSection = document.getElementById(targetId);
 
-  // Check URL hash for initial section
-  const hash = window.location.hash.substring(1);
-  if (hash) {
-    goTo(hash);
-  }
+    if (!targetSection) return;
 
-  window.addEventListener("hashchange", () => {
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-      goTo(hash);
-    }
-    else {
-      goTo("profile");
-    }
+    e.preventDefault();
+
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+    history.pushState(null, "", `#${targetId}`);
   });
 });
 
-// NAVIGATION FUNCTION
-function goTo(target) {
-  if (target === currentSection) return;
+// ACTIVE NAV + SECTION ANIMATION ON SCROLL
+const observer = new IntersectionObserver(
+  entries => {
+    if (isScrollingToTop) return;
 
-  // Hide current section
-  sections[currentSection].classList.remove("show");
-  sections[currentSection].style.display = "none";
+    entries.forEach(entry => {
+      const id = entry.target.id;
 
-  // Remove active nav
-  navButtons[currentSection].classList.remove("active");
+      if (entry.isIntersecting) {
+        // show animation
+        entry.target.classList.add("show");
 
-  // Show target section
-  sections[target].style.display = "flex";
+        // nav active state
+        Object.values(navButtons).forEach(btn =>
+          btn.classList.remove("active")
+        );
+        navButtons[id]?.classList.add("active");
 
-  // force reflow so animation works
-  void sections[target].offsetWidth;
+        // update URL without jumping
+        history.replaceState(null, "", `#${id}`);
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
 
-  sections[target].classList.add("show");
+// OBSERVE SECTIONS
+sections.forEach(section => observer.observe(section));
 
-  // Set active nav
-  navButtons[target].classList.add("active");
+// LOAD WITH HASH SUPPORT
+window.addEventListener("load", () => {
+  const hash = window.location.hash.replace("#", "");
 
-  currentSection = target;
+  if (!hash) {
+    setHomeActive();
+    return;
+  }
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
+  const target = document.getElementById(hash);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+
 
 
 // GLOBAL Image Viewer

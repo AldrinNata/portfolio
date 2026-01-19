@@ -47,14 +47,17 @@ body{
 }
 
 /* Navbar */
-.navBar{
-    width: 100%;
+.navBarContainer{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 9999;
-    padding: 0px;
     height: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.navBar{
+    width: 100%;
+    z-index: 9999;
     background-color: var(--colorc);
 }
 .navBar.disabled {
@@ -65,7 +68,6 @@ body{
     display: flex;
     justify-content: flex-end;
     z-index: 1;
-    margin-right: 2vw;
 }
 .navBar a{
     color: var(--gray90);
@@ -134,7 +136,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 2vw;
 }
 .iconContainer .nav-icon img{
     height: 60px;
@@ -179,18 +180,12 @@ body{
     z-index: 1;
     height: 100%;
     align-items: center;
-    margin-top: 5vh;
-    margin-left: 20vw;
-    margin-right: 20vw;
-    background-color: transparent;
-
-    opacity: 0;
-    transform: translateX(-80px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    background-color: var(--colorc);
+    border-bottom: var(--colora) 2px solid;
+    opacity: 1;
 }
 #profile.show{
     opacity: 1;
-    transform: translateX(0);
 }
 
 
@@ -198,12 +193,14 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-bottom: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 .profile-item{
     display: flex;
     flex-direction: row;
     gap: 5vw;
+    align-items: flex-end;
 }
 .profile-highlight{
     color: var(--colorb);
@@ -213,6 +210,7 @@ body{
     flex-direction: column;
     flex: 1;
     gap: 20px;
+    padding-bottom: 5vh;
 }
 .profileSkillServices{
     display: flex;
@@ -225,9 +223,10 @@ body{
         flex-direction: column;
         gap: 30px;
     }
-    .profileSkillServices .profileSkills h1{
+    .skillsContainer .profileSkills h1{
         color: var(--gray90);
         font-size: 30px;
+        margin-bottom: 0px;
     }
     .profileSkills .skill-list{
         display: flex;
@@ -258,36 +257,9 @@ body{
     }
     .profileSkills .skill-list .skill-item p{
         margin: 0px;
-        color: var(--gray90)
-    }
-    .profileServices{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    .profileSkillServices .profileServices h1{
         color: var(--gray90);
-        font-size: 30px;
-    }
-    .profileServices .service-list{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .profileServices .service-list .service-item{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-    .profileServices .service-list .service-item p{
-        margin: 0px;
-        color: var(--gray90)
-    }
-    .profileServices .service-list .service-item i{
-        margin: 0px;
-        color: var(--gray50)
+        font-family: var(--font-family);
+        font-size: 20px;
     }
 
 .profileInfo{
@@ -344,25 +316,19 @@ body{
         color: var(--colorb);
         border-color: var(--colorb);
     }
-
- #profileImagesMobile{
+#profileImagesDesktop{
+    display: flex;
+}
+#profileImagesMobile{
     display: none;
- }
- #profileImagesMobile img{
+}
+#profileImagesMobile img{
     display: none;
- }
+}
 #profile .profileImages img{
     position: relative;
     width: 100%;
     object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid var(--gray30);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-#profile .profileImages img:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
 }
 
 .profile h1{
@@ -397,6 +363,20 @@ body{
     color: var(--gray90);
 }
 
+/* skills */
+.skills{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background-color: transparent;
+}
+.skillsContainer{
+    padding-bottom: 5vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
 /* Projects */
 .projects{
     background-color: transparent;
@@ -412,8 +392,8 @@ body{
 }
 
 .projectContainer{
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     padding-bottom: 5vh;
     /* border-bottom: var(--gray30) 2px solid; */
 }
@@ -551,8 +531,8 @@ body{
 }
 
 .expContainer{
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     padding-bottom: 5vh;
     /* border-bottom: var(--gray30) 2px solid; */
 }
@@ -713,10 +693,10 @@ body{
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin-top: 5vh;
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    padding-bottom: 5vh;
 }
 .contact.show {
     opacity: 1;
@@ -726,11 +706,12 @@ body{
 .contactContainer{
     display: flex;
     flex-direction: column;
-    margin-left: 25vw;
-    margin-right: 25vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     padding-bottom: 5vh;
 }
 .contactContainer h1{
+    margin-top: 0px;
     margin-bottom: var(--margin-xl);
 }
 .contactDescription{
@@ -794,9 +775,15 @@ body{
     flex-direction: row;
     gap: 20px;
     align-self: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-top: var(--margin-xl);
+    margin-bottom: var(--margin-xl);
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+.socialsContainer{
+    width: 100%;
 }
 .socials-withText{
     display: flex;
@@ -805,8 +792,6 @@ body{
     align-self: center;
     justify-content: center;
     align-items: center;
-    padding-left: var(--padding-m);
-    border-left: 3px solid var(--colorb);
 }
 .socials .socials-withText p{
     font-size: 20px;
@@ -817,12 +802,8 @@ body{
 .socials-img{
     width: 7rem;
     height: 7rem;
-    border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--gray50);
     margin: 0;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .socials-list{
     display: flex;
@@ -831,7 +812,7 @@ body{
     margin-top: var(--margin-xs);
 }
 .social-item{
-    color: var(--colorb);
+    color: var(--gray90);
     font-size: 30px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     border-radius: 100%;
@@ -849,6 +830,27 @@ body{
     padding: 5px;
     margin: 0;
 }
+.socials-email{
+    font-size: 20px;
+    font-family:var(--font-family);
+    color: var(--gray90);
+    margin: 0;
+}
+
+@media (max-width: 1300px){
+    .socials{
+        flex-direction: column;
+    }
+    .socials-withText{
+        border-left: none;
+        padding-left: 0;
+    }
+    .socials .socials-withText p{
+        border-top: 2px solid var(--colorb);
+        padding-top: var(--padding-xxs);
+        font-size: 15px;
+    }
+}
 
 /* About */
 .about {
@@ -858,7 +860,6 @@ body{
     height: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
     opacity: 0;
     transform: translateX(-80px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -868,6 +869,13 @@ body{
     transform: translateX(0);
 }
 
+.about .section-title{
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-xxl);
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
 .aboutContainer {
     display: flex;
     flex-direction: row;
@@ -977,6 +985,27 @@ body{
     font-size: 20px;
     color: var(--gray70);
     font-family: var(--font-family);
+}
+
+/* Footer */
+.footer{
+    width: 100%;
+    background-color: var(--colorc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-text{
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray50);
+    font-family: var(--font-family);
+    font-size: 15px;
+    border-top: 1px solid var(--gray30);
 }
 
 /* Fullscreen overlay */
@@ -1192,11 +1221,15 @@ body.image-viewer-open {
         height: 100%;
         padding-top: 0px;
         padding-bottom: 0px;
-        margin-top: 5vh;
-        margin-bottom: 10vh;
-        margin-left: 10vw;
-        margin-right: 10vw;
         gap: 0px;
+    }
+    .profileContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
     .profile-item{
         display: flex;
@@ -1221,11 +1254,18 @@ body.image-viewer-open {
         font-size: 20px;
         color: var(--colorb);
     }
-    .profileSkillServices .profileSkills h1{
-        font-size: 20px;
+    .skillsContainer .profileSkills h1{
+        font-size: 25px;
+        margin-bottom: var(--margin-m);
     }
-    .profileSkillServices .profileServices h1{
-        font-size: 20px;
+    .profileSkills .skill-list .skill-item p{
+        font-size: 15px;
+    }
+    .skillsContainer{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        padding-bottom: 0px;
+        margin-bottom: 5vh;
     }
     
 
@@ -1241,15 +1281,6 @@ body.image-viewer-open {
     #profile .profileImages{
         display: block;
         width: 100%;
-    }
-    #profile .profileImages img{
-        width: 100%;
-        height: 100%;
-        border-radius: 12px;
-        border: 2px solid var(--gray30);
-        box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin-bottom: 0px;
     }
     .profile h1{
         font-size: 25px;
@@ -1360,11 +1391,15 @@ body.image-viewer-open {
         margin-top: 0;
     }
     .aboutContainer {
-        margin-left: 8vw;
-        margin-right: 8vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
         margin-top: 5vh;
         margin-bottom: 8vh;
         flex-direction: column;
+    }
+    .about .section-title{
+        margin-left: 5vw;
+        margin-right: 5vw;
     }
     .about-list{
         gap: var(--margin-m);
@@ -1423,18 +1458,16 @@ body.image-viewer-open {
 
     .contact {
         padding: 0px;
-        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 0;
-        
     }
     .contactContainer {
         margin-left: 5vw;
         margin-right: 5vw;
-        margin-bottom: 8vh;
+        margin-bottom: 5vh;
     }
     .contact-description {
         font-size: 15px;
@@ -1450,17 +1483,12 @@ body.image-viewer-open {
         padding: var(--padding-s) var(--padding-xxs);
         gap: 15px;
     }
-    .socials{
-        flex-direction: column;
+
+    .footer{
+        margin-bottom: 5vh;
     }
-    .socials-withText{
-        border-left: none;
-        padding-left: 0;
-    }
-    .socials .socials-withText p{
-        border-top: 2px solid var(--colorb);
-        padding-top: var(--padding-xxs);
-        font-size: 15px;
+    .footer-text{
+        font-size: 12px;
     }
 
     .viewer-container {

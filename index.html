@@ -18,17 +18,19 @@
     <button onclick="topFunction()" id="btn-top" title="Go to top"><i class='bxr  bx-caret-up'></i><br>Top</button> 
     <div class="container">
       <nav role="navigation" class="navBar">
-        <div class="iconContainer">
-          <a href="/portfolio/" onclick="handleNav(event, 'profile')" class="nav-icon">
-            <img src="images/icons/icon.ico" alt="Aldrin B. Natanauan Icon">
-          </a>
-        </div>
-        <div class="lists">
-          <a id="home-btn" href="/portfolio/" onclick="handleNav(event, 'profile')">Home</a>
-          <a id="projects-btn" href="#projects" onclick="handleNav(event, 'projects')">Projects</a>
-          <a id="experience-btn" href="#experience" onclick="handleNav(event, 'experience')">Experience</a>
-          <a id="about-btn" href="#about" onclick="handleNav(event, 'about')">About</a>
-          <a id="contact-btn" href="#contact" onclick="handleNav(event, 'contact')">Contact</a>
+        <div class="navBarContainer">
+          <div class="iconContainer">
+            <a href="/portfolio/" onclick="handleNav(event, 'profile')" class="nav-icon">
+              <img src="images/icons/icon.ico" alt="Aldrin B. Natanauan Icon">
+            </a>
+          </div>
+          <div class="lists">
+            <a id="home-btn" href="/portfolio/" onclick="handleNav(event, 'profile')">Home</a>
+            <a id="projects-btn" href="#projects" onclick="handleNav(event, 'projects')">Projects</a>
+            <a id="experience-btn" href="#experience" onclick="handleNav(event, 'experience')">Experience</a>
+            <a id="about-btn" href="#about" onclick="handleNav(event, 'about')">About</a>
+            <a id="contact-btn" href="#contact" onclick="handleNav(event, 'contact')">Contact</a>
+          </div>
         </div>
       </nav>
       <main role="main">
@@ -77,10 +79,18 @@
               
               <div class="profileSkillServices">
                 <div id="profileImagesDesktop" class="profileImages">
-                  <img src="images/aldrin2crop.webp" alt="Graduation Photo (Cropped Version)" data-desc="A cropped graduation photo of Aldrin Barba Natanauan." id="profileImageDesktop" class="viewer-img viewer-group-profile">
+                  <img src="images/aldrin2-removebg.webp" alt="Graduation Photo (Cropped Version)" data-desc="A cropped graduation photo of Aldrin Barba Natanauan." id="profileImageDesktop" class="viewer-img viewer-group-profile">
                 </div>
-                <div class="profileSkills">
-                  <h1>Key Skills</h1>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="skills">
+          <div class="skillsContainer">
+              <div class="profileSkills">
+                  <h1 class="section-title">Key Skills</h1>
                   <div class="skill-list">
                     <div class="skill-item">
                       <i class="fa-brands fa-html5"></i>
@@ -140,11 +150,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              
             </div>
-            
-          </div>
         </div>
 
         <div id="projects" class="projects">
@@ -279,8 +285,8 @@
         </div>
 
         <div id="about" class="about">
+          <h1 class="section-title">About Me</h1>
           <div class="aboutContainer">
-
             <div class="aboutImages">
               <img src="images/aldrin.webp" alt="Graduation Photo Wearing Barong Tagalog" data-desc="An image of Aldrin Barba Natanauan wearing a barong tagalog (a traditional Filipino headdress)." id="aboutImage" class="viewer-img viewer-group-about">
             </div>
@@ -396,51 +402,7 @@
               </a>
             </div>
 
-            <div class="socials">
-              <img src="images/icons/iconw.ico" alt="Aldrin Natanauan Logo" class="socials-img viewer-img viewer-group-socials" data-desc="White logo of Aldrin B. Natanauan." id="aldrinLogo">
-              
-              <div class="socials-withText">
-                <p>Follow me on my socials:</p>
-                <div class="socials-list">
-                  <a
-                    href="https://www.github.com/AldrinNatanauan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-item"
-                    title="GitHub"
-                  >
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a
-                    href="https://www.facebook.com/Aldrin.B.Natanauan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-item"
-                    title="Facebook"
-                  >
-                    <i class="fa-brands fa-facebook"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/aldrin_natanauan/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-item"
-                    title="Instagram"
-                  >
-                    <i class="fa-brands fa-square-instagram"></i>
-                  </a>
-                  <a
-                    href="https://www.x.com/NatanauanAldrin/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-item"
-                    title="X (Twitter)"
-                  >
-                    <i class="fa-brands fa-square-x-twitter"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
 
@@ -477,7 +439,56 @@
       </main>
 
       <footer class="footer">
-        <p hidden>&copy; 2026 Aldrin B. Natanauan. All rights reserved.</p>
+        <div class="socialsContainer">
+          <div class="socials">
+            <div class="socials-withText">
+              <div class="socials-list">
+                <a
+                  href="https://www.github.com/AldrinNatanauan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-item"
+                  title="GitHub"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/Aldrin.B.Natanauan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-item"
+                  title="Facebook"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/aldrin_natanauan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-item"
+                  title="Instagram"
+                >
+                  <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a
+                  href="https://www.x.com/NatanauanAldrin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-item"
+                  title="X (Twitter)"
+                >
+                  <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
+              </div>
+            </div>
+            <img src="images/icons/icon.ico" alt="Aldrin Natanauan Logo" class="socials-img viewer-img viewer-group-socials" data-desc="White logo of Aldrin B. Natanauan." id="aldrinLogo">
+            <h3 class="socials-email">aldrinnatanauan24@gmail.com</h3>
+          </div>
+        </div>
+        
+        <div class="footer-text">
+          <p>&copy; 2026 Aldrin B. Natanauan. All rights reserved.</p>
+        </div>
       </footer>
 
     </div>
