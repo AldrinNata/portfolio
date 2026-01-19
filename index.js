@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-topBtn.addEventListener("click", () => {
+function topFunction() {
   isScrollingToTop = true;
 
   history.replaceState(null, "", window.location.pathname);
@@ -26,8 +26,24 @@ topBtn.addEventListener("click", () => {
   setTimeout(() => {
     isScrollingToTop = false;
   }, 600);
-});
+}
 
+function handleNav(event, targetId) {
+  event.preventDefault();
+
+  const targetSection = document.getElementById(targetId);
+  if (!targetSection) return;
+
+  targetSection.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  Object.values(navButtons).forEach(btn => btn.classList.remove("active"));
+  if (navButtons[targetId]) navButtons[targetId].classList.add("active");
+
+  history.pushState(null, "", `#${targetId}`);
+}
 
 
 // SECTION + NAV MAP
@@ -40,8 +56,10 @@ const navButtons = {
   projects: document.getElementById("projects-btn"),
   experience: document.getElementById("experience-btn"),
   about: document.getElementById("about-btn"),
-  contact: document.getElementById("contact-btn")
+  contact: document.getElementById("contact-btn"),
+  getInTouch: document.getElementById("get-in-touch")
 };
+
 
 function setHomeActive() {
   Object.values(navButtons).forEach(btn =>
@@ -52,23 +70,10 @@ function setHomeActive() {
 
 
 // SMOOTH SCROLL ON NAV CLICK (crawlable)
-Object.values(navButtons).forEach(btn => {
-  btn.addEventListener("click", e => {
-    const targetId = btn.getAttribute("href").replace("#", "");
-    const targetSection = document.getElementById(targetId);
-
-    if (!targetSection) return;
-
-    e.preventDefault();
-
-    targetSection.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-
-    history.pushState(null, "", `#${targetId}`);
-  });
+Object.entries(navButtons).forEach(([key, btn]) => {
+  btn.addEventListener("click", e => handleNav(e, key === "profile" ? "profile" : key === "getInTouch" ? "contact" : key));
 });
+
 
 // ACTIVE NAV + SECTION ANIMATION ON SCROLL
 const observer = new IntersectionObserver(
@@ -79,16 +84,13 @@ const observer = new IntersectionObserver(
       const id = entry.target.id;
 
       if (entry.isIntersecting) {
-        // show animation
         entry.target.classList.add("show");
 
-        // nav active state
         Object.values(navButtons).forEach(btn =>
           btn.classList.remove("active")
         );
         navButtons[id]?.classList.add("active");
 
-        // update URL without jumping
         history.replaceState(null, "", `#${id}`);
       }
     });
@@ -116,6 +118,13 @@ window.addEventListener("load", () => {
   }
 });
 
+// Clear hash if scrolling to top manually
+window.addEventListener('scroll', () => {
+  if (window.scrollY === 0 && window.location.hash) {
+    history.replaceState(null, '', ' ');
+    setHomeActive();
+  }
+});
 
 
 
