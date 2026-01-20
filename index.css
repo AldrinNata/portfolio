@@ -25,7 +25,7 @@
     --gray70: hsl(0, 0%, 70%);
     --gray90: hsl(0, 0%, 90%);
     --colora: #333333;
-    --colorb: #539BF5;
+    --colorb: #2196f7;
     --colorc: #010409;
     --bggradient: linear-gradient(135deg, #0D1117 0%, #161B22 100%);
 
@@ -52,8 +52,8 @@ body{
     justify-content: flex-end;
     align-items: center;
     height: 10vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 .navBar{
     width: 100%;
@@ -142,6 +142,10 @@ body{
     width: 60px;
     cursor: pointer;
 }
+.iconContainer .nav-icon{
+    margin: 0px;
+    padding: 0px;
+}
 
 #btn-top {
     opacity: 0;
@@ -153,7 +157,8 @@ body{
     border: none; 
     outline: none;
     background-color: var(--colorb); 
-    color: var(--colora); 
+    color: var(--gray90); 
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     cursor: pointer; 
     padding: 15px; 
     border-radius: 10px; 
@@ -199,7 +204,7 @@ body{
 .profile-item{
     display: flex;
     flex-direction: row;
-    gap: 5vw;
+    gap: 2vw;
     align-items: flex-end;
 }
 .profile-highlight{
@@ -211,56 +216,14 @@ body{
     flex: 1;
     gap: 20px;
     padding-bottom: 5vh;
+    padding-top: 2vh;
 }
-.profileSkillServices{
+.profileContainerDesktop{
     display: flex;
     flex-direction: column;
     flex: 1;
     gap: 10px;
 }
-    .profileSkills{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    .skillsContainer .profileSkills h1{
-        color: var(--gray90);
-        font-size: 30px;
-        margin-bottom: 0px;
-    }
-    .profileSkills .skill-list{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .profileSkills .skill-list .skill-item{
-        padding: 5px 15px;
-        background-color: var(--gray30);
-        border-radius: 999px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-        cursor: default;
-        transition: background-color 0.3s ease, translate 0.3s ease;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-    }
-    .profileSkills .skill-list .skill-item i{
-        margin: 0px;
-        color: var(--colorb);
-        font-size: 20px;
-    }
-    .profileSkills .skill-list .skill-item:hover{
-        background-color: var(--colora);
-        translate: 0px -5px;
-    }
-    .profileSkills .skill-list .skill-item p{
-        margin: 0px;
-        color: var(--gray90);
-        font-family: var(--font-family);
-        font-size: 20px;
-    }
 
 .profileInfo{
     display: flex;
@@ -348,7 +311,8 @@ body{
     width: fit-content;
     padding: 10px 30px;
     background-color: var(--colorb);
-    color: var(--colora);
+    color: var(--gray90);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
     border: none;
     border-radius: 2px;
     font-size: 15px;
@@ -372,9 +336,48 @@ body{
     background-color: transparent;
 }
 .skillsContainer{
+    padding-top: 5vh;
     padding-bottom: 5vh;
     margin-left: 20vw;
     margin-right: 20vw;
+}
+.profileSkills{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.profileSkills .skill-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.profileSkills .skill-list .skill-item{
+    padding: 5px 15px;
+    background-color: var(--gray30);
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    cursor: default;
+    transition: background-color 0.3s ease, translate 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.profileSkills .skill-list .skill-item i{
+    margin: 0px;
+    color: var(--colorb);
+    font-size: 20px;
+}
+.profileSkills .skill-list .skill-item:hover{
+    background-color: var(--colora);
+    translate: 0px -5px;
+}
+.profileSkills .skill-list .skill-item p{
+    margin: 0px;
+    color: var(--gray90);
+    font-family: var(--font-family);
+    font-size: 20px;
 }
 
 /* Projects */
@@ -539,6 +542,7 @@ body{
 .section-title {
     position: relative;
     margin-bottom: 5vh;
+    margin-top: 0px;
     font-size: 50px;
     color: var(--gray90);
     font-family: var(--font-family);
@@ -1234,7 +1238,7 @@ body.image-viewer-open {
     .profile-item{
         display: flex;
         flex-direction: column;
-        gap: 5vh;
+        gap: 1vh;
     }
     .profileText{
         gap: 10px;
@@ -1253,10 +1257,6 @@ body.image-viewer-open {
     .profile-item .profileInfo-item i{
         font-size: 20px;
         color: var(--colorb);
-    }
-    .skillsContainer .profileSkills h1{
-        font-size: 25px;
-        margin-bottom: var(--margin-m);
     }
     .profileSkills .skill-list .skill-item p{
         font-size: 15px;
