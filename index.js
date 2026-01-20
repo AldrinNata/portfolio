@@ -28,6 +28,14 @@ function topFunction() {
   }, 600);
 }
 
+// DARK MODE
+const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("light")
+})
+
+// NAVIGATION HANDLER
+
 function handleNav(event, targetId) {
   event.preventDefault();
 

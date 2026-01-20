@@ -16,7 +16,7 @@
   </head>
   <body>
     <button onclick="topFunction()" id="btn-top" title="Go to top"><i class='bxr  bx-caret-up'></i><br>Top</button> 
-    <div class="container">
+    <div id="container" class="container">
       <nav role="navigation" class="navBar">
         <div class="navBarContainer">
           <div class="iconContainer">
@@ -31,6 +31,14 @@
             <a id="about-btn" href="#about" onclick="handleNav(event, 'about')">About</a>
             <a id="contact-btn" href="#contact" onclick="handleNav(event, 'contact')">Contact</a>
           </div>
+          <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox-label">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
         </div>
       </nav>
       <main role="main">
@@ -42,7 +50,7 @@
               </div>
               <div class="profileContainerDesktop">
                 <div id="profileImagesDesktop" class="profileImages">
-                  <img src="images/aldrin2-removebg.webp" alt="Graduation Photo (Cropped Version)" data-desc="A cropped graduation photo of Aldrin Barba Natanauan." id="profileImageDesktop" class="viewer-img viewer-group-profile">
+                  <img src="images/aldrin2-removebg.webp" alt="Graduation Photo (No Background Version)" data-desc="No background graduation photo of Aldrin Barba Natanauan." id="profileImageDesktop" class="viewer-img viewer-group-profile">
                 </div>
               </div>
               <div class="profileText">
@@ -480,7 +488,7 @@
                 </a>
               </div>
             </div>
-            <img src="images/icons/icon.ico" alt="Aldrin Natanauan Logo" class="socials-img viewer-img viewer-group-socials" data-desc="White logo of Aldrin B. Natanauan." id="aldrinLogo">
+            <img src="images/icons/icon.ico" alt="Aldrin Natanauan Logo" class="socials-img viewer-img viewer-group-socials" data-desc="Logo of Aldrin B. Natanauan." id="aldrinLogo">
             <h3 class="socials-email">aldrinnatanauan24@gmail.com</h3>
           </div>
         </div>
