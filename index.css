@@ -517,7 +517,6 @@ body.light .social-item i, body.light .socials-email{
     background: rgba(0, 0, 0, 0.65);
 }
 
-/* Play button */
 .playButton {
     width: 90px;
     height: 90px;
@@ -558,11 +557,17 @@ body.light .social-item i, body.light .socials-email{
     margin-right: 20vw;
     padding-top: 1px;
     padding-bottom: 1px;
+    display: none;
 }
 .videoPlayer {
     width: 100%;
-    display: none;
-    background-color: transparent;
+    aspect-ratio: 16 / 9;
+    background-color: black;
+    border: none;
+    display: block; 
+}
+.videoThumbnailWrapper {
+    transition: opacity 0.4s ease;
 }
 
 /* Projects */

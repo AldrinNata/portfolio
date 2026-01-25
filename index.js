@@ -248,30 +248,32 @@ document.querySelectorAll(".expImages, .projectImages").forEach(container => {
 });
 
 
-//VIDEO
+// VIDEO
 document.querySelectorAll(".videoThumbnailWrapper").forEach(wrapper => {
   const overlay = wrapper.querySelector(".videoOverlay");
-  const thumbnail = wrapper.querySelector(".videoThumbnail");
+  const videoText = wrapper.querySelector(".videoText");
   const container = wrapper.nextElementSibling;
-  const video = container.querySelector(".videoPlayer");
+  const iframe = container.querySelector(".videoPlayer");
 
   overlay.addEventListener("mouseenter", () => {
-    document.querySelector(".videoText").style.display = "block";
+    if (videoText) videoText.style.display = "block";
   });
 
   overlay.addEventListener("mouseleave", () => {
-    if(window.innerWidth <= 800) return;
-    document.querySelector(".videoText").style.display = "none";
+    if (window.innerWidth <= 800) return;
+    if (videoText) videoText.style.display = "none";
   });
 
   overlay.addEventListener("click", () => {
-    overlay.style.display = "none";
-    thumbnail.style.display = "none";
-    wrapper.style.display = "none";
+    wrapper.style.opacity = "0";
 
-    container.style.display = "block";
-    video.style.display = "block";
-    video.play();
+    setTimeout(() => {
+      wrapper.style.display = "none";
+      container.style.display = "block";
+
+      const src = iframe.getAttribute("src");
+      iframe.setAttribute("src", src);
+    }, 400);
   });
 });
 
