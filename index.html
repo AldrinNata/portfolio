@@ -88,7 +88,6 @@
                   </button>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
@@ -96,7 +95,7 @@
         <div class="skills">
           <div class="skillsContainer">
               <div class="profileSkills">
-                  
+                  <h1 class="section-title">Skills</h1>
                   <div class="skill-list">
                     <div class="skill-item">
                       <i class="fa-solid fa-file-excel"></i>
@@ -187,16 +186,67 @@
             </div>
         </div>
 
+        <div id="video" class="video">
+          <div class="videoThumbnailWrapper">
+            <img src="images/vid_thumbnail.webp" alt="Introduction Video" class="videoThumbnail" />
+            <div class="videoOverlay">
+              <div class="playButton">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <h2 class="videoTitle">My Introduction</h2>
+              <div class="videoText">
+                <p class="videoDescription" id="videoDescription">
+                  A short video about who I am and what I do.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="videoContainer">
+            <video class="videoPlayer" data-desc="A short video Introduction of Aldrin B. Natanauan" controls>
+              <source src="videos/vid_intro.mp4" type="video/mp4" data-desc="A short video Introduction of Aldrin B. Natanauan" />
+            </video>
+          </div>
+        </div>
+
         <div id="projects" class="projects">
           <div class="projectContainer">
             <h1 class="section-title">Projects</h1>
             <div class="project-list">
               <div class="project-item">
-                <div class="projectText">
-                  <h2>SWAD Bataan Document Checklists</h2>
-                  <p>A Document Checklists Data Management System for the Department of Social Welfare and Development (DSWD). 
-                    I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
-                    and I also worked on the front-end side of things.</p>
+                <div class="projectExp-desc">
+                  <div class="projectText">
+                    <h2>SWAD Bataan Document Checklists</h2>
+                    <p>A Document Checklists Data Management System for the Department of Social Welfare and Development (DSWD). 
+                      I worked with 2 team members to develop this system. I am responsible for the entire back-end of the system, 
+                      and I also worked on the front-end side of things.</p>
+                  </div>
+                  <div class="projectExpSkills">
+                    <div class="skill-wrapper">
+                      <div class="skill-item">
+                        <i class="fa-brands fa-node-js"></i>
+                        <p>JavaScript</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-php"></i>
+                        <p>PHP</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-database"></i>
+                        <p>MySQL</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <p>Git</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-github"></i>
+                        <p>GitHub</p>
+                      </div>
+
+                      <div class="skill-item skill-more" style="display:none;"></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="projectImages">
                   <div class="img-wrapper">
@@ -207,9 +257,45 @@
                 </div>
               </div>
               <div class="project-item">
-                <div class="projectText">
-                  <h2>Herbhie: E-commerce on Herbal Plants</h2>
-                  <p>An e-commerce platform specialising in herbal plants, featuring email notifications to conveniently verify plant availability and facilitate purchases for plant enthusiasts. It also supports business owners in marketing their plants while offering information on cultivation techniques and proper usage of herbal plants. The system has 4 user roles: Super Admin, Admin, Customer, and Seller. The system is built using HTML, CSS, JavaScript, PHP, MySQL, and XAMPP. This is our college capstone project where I worked as the Lead Developer.</p>
+                <div class="projectExp-desc">
+                  <div class="projectText">
+                    <h2>Herbhie: E-commerce on Herbal Plants</h2>
+                    <p>An e-commerce platform specialising in herbal plants, featuring email notifications to conveniently verify plant availability and facilitate purchases for plant enthusiasts. It also supports business owners in marketing their plants while offering information on cultivation techniques and proper usage of herbal plants. The system has 4 user roles: Super Admin, Admin, Customer, and Seller. The system is built using HTML, CSS, JavaScript, PHP, MySQL, and XAMPP. This is our college capstone project where I worked as the Lead Developer.</p>
+                  </div>
+                  <div class="projectExpSkills">
+                    <div class="skill-wrapper">
+                      <div class="skill-item">
+                        <i class="fa-brands fa-html5"></i>
+                        <p>HTML</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <p>CSS</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-square-js"></i>
+                        <p>JavaScript</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-php"></i>
+                        <p>PHP</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-database"></i>
+                        <p>MySQL</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <p>Git</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-github"></i>
+                        <p>GitHub</p>
+                      </div>
+
+                      <div class="skill-item skill-more" style="display:none;"></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="projectImages">
                   <div class="img-wrapper">
@@ -266,28 +352,91 @@
             <h1 class="section-title">Experience</h1>
             <div class="experience-list">
               <div class="experience-item">
-                <div class="expText">
-                  <h2>Full Stack Developer | Capstone Project</h2>
-                  <h3>Bataan Peninsula State University</h3>
-                  <h3 class="exp-date">June 2024 - January 2025</h3>
-                  <p>Developed a working e-commerce web application that involves the users (sellers and customers) 
-                    to buy and sell herbs while also helping to spread information about the uses, benefits, and 
-                    reminders about different herbs. This was our capstone project, and I worked as the Lead Developer. 
-                    I did the front-end and back-end development of the system using mainly HTML, PHP, MySQL, JavaScript, and AJAX.</p>
+                <div class="projectExp-desc">
+                  <div class="expText">
+                    <h2>Computer Systems Servicing NCII</h2>
+                    <h3>ADA Technical Foundation Inc.- Hermosa, Bataan</h3>
+                    <h3 class="exp-date">September 2025 - November 2025</h3>
+                    <p>Trained for 2 months in ADA Technical Foundation Inc., a TESDA accredited training center for Computer Systems Servicing NCII. Here, I learned how to troubleshoot computer hardware and software issues. I also learned how to configure and maintain computer networks. Lastly, I learned how to install windows servers, configure DNS, configure DHCP, configure Active Directory, and connect multiple devices to a domain.</p>
+                  </div>
+                  <div class="projectExpSkills">
+                    <div class="skill-wrapper">
+                      <div class="skill-item">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Troubleshoot</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <p>Network</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-windows"></i>
+                        <p>Windows</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-windows"></i>
+                        <p>Windows Server</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-wrench"></i>
+                        <p>Hardware</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-hard-drive"></i>
+                        <p>Storage</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-print"></i>
+                        <p>Printer</p>
+                      </div>
+
+                      <div class="skill-item skill-more" style="display:none;"></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="expImages">
-                  
                   <div class="img-wrapper">
-                    <img src="images/exp/capstone/capstone.webp" alt="Herbhie: Herbal E-commerce Platform Team" data-desc="Picture with our advisor after successfully completing and presenting our capstone project to the faculty." id="Capstone1" class="viewer-img viewer-group-capstone">
+                    <img src="images/exp/tesdacss/csstesda1.webp" alt="TESDA NCII Assessment" data-desc="Taking the Computer Systems Servicing NCII assessment." id="CSSTesda1" class="viewer-img viewer-group-csstesda">
+                  </div>
+                  <div class="img-wrapper">
+                    <img src="images/exp/tesdacss/csstesda2.webp" alt="Hardware Troubleshooting" data-desc="Troubleshooting computer hardware issues and maintaining the health of the computer system." id="CSSTesda2" class="viewer-img viewer-group-csstesda">
                   </div>
                 </div>
               </div>
               <div class="experience-item">
-                <div class="expText">
-                  <h2>Back-end Developer | On the Job Training</h2>
-                  <h3>Department of Social Welfare and Development</h3>
-                  <h3 class="exp-date">February 2025 - May 2025</h3>
-                  <p>Trained for 513 hours and 12 minutes in the Department of Social Welfare and Development (DSWD) as a back-end developer and IT support. I developed a data management system for the Department of Social Welfare and Development (DSWD) using JavaScript, PHP, and MySQL.</p>
+                <div class="projectExp-desc">
+                  <div class="expText">
+                    <h2>Back-end Developer | On the Job Training</h2>
+                    <h3>Department of Social Welfare and Development</h3>
+                    <h3 class="exp-date">February 2025 - May 2025</h3>
+                    <p>Trained for 513 hours and 12 minutes in the Department of Social Welfare and Development (DSWD) as a back-end developer and IT support. I developed a data management system for the Department of Social Welfare and Development (DSWD) using JavaScript, PHP, and MySQL.</p>
+                  </div>
+                  <div class="projectExpSkills">
+                    <div class="skill-wrapper">
+                      <div class="skill-item">
+                        <i class="fa-brands fa-node-js"></i>
+                        <p>JavaScript</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-php"></i>
+                        <p>PHP</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-database"></i>
+                        <p>MySQL</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <p>Git</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-github"></i>
+                        <p>GitHub</p>
+                      </div>
+
+                      <div class="skill-item skill-more" style="display:none;"></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="expImages">
                   <div class="img-wrapper">
@@ -299,21 +448,60 @@
                 </div>
               </div>
               <div class="experience-item">
-                <div class="expText">
-                  <h2>Computer Systems Servicing NCII</h2>
-                  <h3>ADA Technical Foundation Inc.- Hermosa, Bataan</h3>
-                  <h3 class="exp-date">September 2025 - November 2025</h3>
-                  <p>Trained for 2 months in ADA Technical Foundation Inc., a TESDA accredited training center for Computer Systems Servicing NCII. Here, I learned how to troubleshoot computer hardware and software issues. I also learned how to configure and maintain computer networks. Lastly, I learned how to install windows servers, configure DNS, configure DHCP, configure Active Directory, and connect multiple devices to a domain.</p>
+                <div class="projectExp-desc">
+                  <div class="expText">
+                    <h2>Full Stack Developer | Capstone Project</h2>
+                    <h3>Bataan Peninsula State University</h3>
+                    <h3 class="exp-date">June 2024 - January 2025</h3>
+                    <p>Developed a working e-commerce web application that involves the users (sellers and customers) 
+                      to buy and sell herbs while also helping to spread information about the uses, benefits, and 
+                      reminders about different herbs. This was our capstone project, and I worked as the Lead Developer. 
+                      I did the front-end and back-end development of the system using mainly HTML, PHP, MySQL, JavaScript, and AJAX.</p>
+                  </div>
+                  <div class="projectExpSkills">
+                    <div class="skill-wrapper">
+                      <div class="skill-item">
+                        <i class="fa-brands fa-html5"></i>
+                        <p>HTML</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <p>CSS</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-node-js"></i>
+                        <p>JavaScript</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-php"></i>
+                        <p>PHP</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-solid fa-database"></i>
+                        <p>MySQL</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <p>Git</p>
+                      </div>
+                      <div class="skill-item">
+                        <i class="fa-brands fa-github"></i>
+                        <p>GitHub</p>
+                      </div>
+
+                      <div class="skill-item skill-more" style="display:none;"></div>
+                    </div>
+                  </div>
                 </div>
                 <div class="expImages">
+                  
                   <div class="img-wrapper">
-                    <img src="images/exp/tesdacss/csstesda1.webp" alt="TESDA NCII Assessment" data-desc="Taking the Computer Systems Servicing NCII assessment." id="CSSTesda1" class="viewer-img viewer-group-csstesda">
-                  </div>
-                  <div class="img-wrapper">
-                    <img src="images/exp/tesdacss/csstesda2.webp" alt="Hardware Troubleshooting" data-desc="Troubleshooting computer hardware issues and maintaining the health of the computer system." id="CSSTesda2" class="viewer-img viewer-group-csstesda">
+                    <img src="images/exp/capstone/capstone.webp" alt="Herbhie: Herbal E-commerce Platform Team" data-desc="Picture with our advisor after successfully completing and presenting our capstone project to the faculty." id="Capstone1" class="viewer-img viewer-group-capstone">
                   </div>
                 </div>
               </div>
+              
+              
             </div>
           </div>
         </div>

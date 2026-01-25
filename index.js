@@ -246,3 +246,143 @@ document.querySelectorAll(".expImages, .projectImages").forEach(container => {
     lastVisible.appendChild(overlay);
   }
 });
+
+
+//VIDEO
+document.querySelectorAll(".videoThumbnailWrapper").forEach(wrapper => {
+  const overlay = wrapper.querySelector(".videoOverlay");
+  const thumbnail = wrapper.querySelector(".videoThumbnail");
+  const container = wrapper.nextElementSibling;
+  const video = container.querySelector(".videoPlayer");
+
+  overlay.addEventListener("mouseenter", () => {
+    document.querySelector(".videoText").style.display = "block";
+  });
+
+  overlay.addEventListener("mouseleave", () => {
+    if(window.innerWidth <= 800) return;
+    document.querySelector(".videoText").style.display = "none";
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    thumbnail.style.display = "none";
+    wrapper.style.display = "none";
+
+    container.style.display = "block";
+    video.style.display = "block";
+    video.play();
+  });
+});
+
+
+
+// SKILLS CONTAINER OVERFLOW (+n LOGIC)
+function applySkillOverflow(wrapper) {
+  wrapper.classList.remove("is-open");
+
+  const items = [...wrapper.querySelectorAll(".skill-item:not(.skill-more)")];
+  const moreItem = wrapper.querySelector(".skill-more");
+
+  if (!items.length || !moreItem) return;
+
+  // Reset
+  items.forEach(i => (i.style.display = "flex"));
+  moreItem.style.display = "none";
+
+  const firstRowTop = items[0].getBoundingClientRect().top;
+  const visible = [];
+  const hidden = [];
+
+  items.forEach(item => {
+    const top = item.getBoundingClientRect().top;
+    (Math.abs(top - firstRowTop) < 1 ? visible : hidden).push(item);
+  });
+
+  if (!hidden.length) return;
+
+  // Hide overflow
+  hidden.forEach(i => i.style.display = "none");
+
+  moreItem.textContent = `+${hidden.length}`;
+  moreItem.style.display = "flex";
+  wrapper.dataset.hiddenCount = hidden.length;
+}
+
+function setupSkillOverflowResize() {
+  let resizeTimer;
+
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      document.querySelectorAll(".skill-wrapper").forEach(wrapper => {
+        applySkillOverflow(wrapper);
+      });
+    }, 100);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".skill-wrapper").forEach(wrapper => {
+    applySkillOverflow(wrapper);
+  });
+
+  setupSkillOverflowResize();
+});
+
+//DROPDOWN
+function toggleDropdown(wrapper, open) {
+  const items = wrapper.querySelectorAll(".skill-item:not(.skill-more)");
+  const moreItem = wrapper.querySelector(".skill-more");
+
+  if (open) {
+    wrapper.classList.add("is-open");
+    items.forEach(i => (i.style.display = "flex"));
+    if (moreItem) moreItem.style.display = "none";
+  } else {
+    wrapper.classList.remove("is-open");
+    applySkillOverflow(wrapper);
+  }
+}
+
+//DESKTOP BEHAVIOR
+function initDesktopDropdown(wrapper) {
+  wrapper.addEventListener("mouseenter", () => {
+    if (window.innerWidth <= 800) return;
+    toggleDropdown(wrapper, true);
+  });
+
+  wrapper.addEventListener("mouseleave", () => {
+    if (window.innerWidth <= 800) return;
+    toggleDropdown(wrapper, false);
+  });
+}
+
+//MOBILE BEHAVIOR
+function initMobileDropdown(wrapper) {
+  wrapper.addEventListener("click", e => {
+    if (window.innerWidth > 800) return;
+    if (e.target.closest(".skill-item") && !e.target.classList.contains("skill-more")) return;
+
+    const isOpen = wrapper.classList.contains("is-open");
+    toggleDropdown(wrapper, !isOpen);
+  });
+}
+
+// INIT ON LOAD
+function initSkillWrappers() {
+  document.querySelectorAll(".skill-wrapper").forEach(wrapper => {
+    applySkillOverflow(wrapper);
+
+    if (wrapper.dataset.dropdownInit === "true") return;
+
+    initDesktopDropdown(wrapper);
+    initMobileDropdown(wrapper);
+
+    wrapper.dataset.dropdownInit = "true";
+  });
+}
+
+window.addEventListener("load", () => {
+  requestAnimationFrame(initSkillWrappers);
+});
