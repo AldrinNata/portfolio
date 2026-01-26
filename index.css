@@ -641,7 +641,7 @@ body.light .social-item i, body.light .socials-email{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px 5px;
+    padding: 10px 0px;
 
     max-width: 100%;
     overflow: hidden;
@@ -657,7 +657,7 @@ body.light .social-item i, body.light .socials-email{
 }
 
 .projectExpSkills .skill-item{
-    padding: 5px 15px;
+    padding: 5px 12px;
     background-color: var(--gray30);
     border-radius: 999px;
     cursor: default;
@@ -681,7 +681,7 @@ body.light .social-item i, body.light .socials-email{
     margin: 0px;
     color: var(--gray90);
     font-family: var(--font-family);
-    font-size: 20px;
+    font-size: 15px;
     transition: color 0.3s ease;
 }
 
