@@ -34,8 +34,24 @@ checkbox.addEventListener("change", () => {
   document.body.classList.toggle("light")
 })
 
-// NAVIGATION HANDLER
 
+//DYNAMIC AGE
+const birthday = new Date('2003-01-24');
+const today = new Date();
+
+let age = today.getFullYear() - birthday.getFullYear();
+const monthDiff = today.getMonth() - birthday.getMonth();
+
+if (
+  monthDiff < 0 ||
+  (monthDiff === 0 && today.getDate() < birthday.getDate())
+) {
+  age--;
+}
+document.getElementById('age').textContent = `${age} Years Old`;
+
+
+// NAVIGATION HANDLER
 function handleNav(event, targetId) {
   event.preventDefault();
 
