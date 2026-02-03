@@ -1735,7 +1735,8 @@ body.image-viewer-open {
     }
     .contact-item {
         padding: var(--padding-s) var(--padding-xxs);
-        gap: 15px;
+        gap: 7px;
+        padding-left: 7px;
     }
 
     .footer-text{
