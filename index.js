@@ -51,6 +51,15 @@ if (
 document.getElementById('age').textContent = `${age} Years Old`;
 
 
+// DYNAMIC EXPERIENCE YEARS
+const startDate = new Date('2024-06-01');
+const now = new Date();
+
+let expYears = (now - startDate) / (1000 * 60 * 60 * 24 * 365);
+expYears = Math.floor(expYears);
+document.getElementById('exp-years').textContent = `${expYears}`;
+
+
 // NAVIGATION HANDLER
 function handleNav(event, targetId) {
   event.preventDefault();
